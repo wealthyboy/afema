@@ -7,9 +7,11 @@
 storage/framework/views/*
 storage/*
 
+ public/.DS_Store
+
+.DS_Store
 /public/images/category
 /public/images/brands
-
 
 /vendor
 .env
