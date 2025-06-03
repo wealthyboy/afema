@@ -43,7 +43,7 @@
 
 <body>
 
-   <img src="afemia_logo.jpeg" alt="Afemai Logo" class="logo">
+   <img src="/images/logo/afemia_logo.jpeg" alt="Afemai Logo" class="logo">
 
    <h1>We're Under Construction</h1>
    <p>Thank you for visiting the Afemai Association of Canada.<br>
