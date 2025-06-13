@@ -8,7 +8,6 @@ use Illuminate\Http\Request;
 use App\Models\Live;
 use App\Models\Information;
 use App\Models\Event;
-
 use App\Models\Banner;
 
 
@@ -34,8 +33,10 @@ class HomeController
             ));
         } else {
             //Show site if admin is logged in
-            if (auth()->check()  && auth()->user()->isAdmin()) {
-                return view('index', compact('banners'));
+            if (auth()->check()) {
+                return view('index', compact(
+                    'banners',
+                ));
             }
             return view('underconstruction.index');
         }
