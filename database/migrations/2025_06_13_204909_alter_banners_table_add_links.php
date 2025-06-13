@@ -14,7 +14,6 @@ class AlterBannersTableAddLinks extends Migration
     public function up()
     {
         Schema::table('banners', function (Blueprint $table) {
-            $table->id();
 
             $table->string('link')->nullable();
         });
