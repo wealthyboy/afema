@@ -21,7 +21,7 @@ function getFile(e, name, model = null, multiple = true, edit_mode = false) {
 
   form.append("file", file.files[0]);
   $.ajax({
-    url: "/admin/upload/image?folder=apartments",
+    url: "/admin/upload/image?folder=events",
     type: "POST",
     data: form,
     cache: false,
