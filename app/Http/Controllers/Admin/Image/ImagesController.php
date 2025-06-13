@@ -127,17 +127,17 @@ class ImagesController extends Controller
             $file = basename($path);
             $path =  public_path('images/' . $request->folder . '/' . $file);
 
-            $img  = \Image::make($path)->fit(400, 400)->save(
-                public_path('images/' . $request->folder . '/m/' . $file)
-            );
-            $canvas = \Image::canvas(106, 145);
-            $image  = \Image::make($path)->resize(150, 250, function ($constraint) {
-                $constraint->aspectRatio();
-            });
-            $canvas->insert($image, 'center');
-            $canvas->save(
-                public_path('images/' . $request->folder . '/tn/' . $file)
-            );
+            // $img  = \Image::make($path)->fit(400, 400)->save(
+            //     public_path('images/' . $request->folder . '/m/' . $file)
+            // );
+            // $canvas = \Image::canvas(106, 145);
+            // $image  = \Image::make($path)->resize(150, 250, function ($constraint) {
+            //     $constraint->aspectRatio();
+            // });
+            // $canvas->insert($image, 'center');
+            // $canvas->save(
+            //     public_path('images/' . $request->folder . '/tn/' . $file)
+            // );
             return $path = asset('images/' . $request->folder . '/' . $file);
         }
     }
