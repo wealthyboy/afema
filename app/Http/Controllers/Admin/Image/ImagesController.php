@@ -111,15 +111,15 @@ class ImagesController extends Controller
 
 
             if (!\File::exists($path)) {
-                \File::makeDirectory(public_path('images/' . $request->folder), 0755, true);
+                //  \File::makeDirectory(public_path('images/' . $request->folder), 0755, true);
             }
 
             if (!\File::exists($path_m)) {
-                \File::makeDirectory(public_path('images/' . $request->folder . '/m'), 0755, true);
+                // \File::makeDirectory(public_path('images/' . $request->folder . '/m'), 0755, true);
             }
 
             if (!\File::exists($path_tn)) {
-                \File::makeDirectory(public_path('images/' . $request->folder . '/tn'), 0755, true);
+                // \File::makeDirectory(public_path('images/' . $request->folder . '/tn'), 0755, true);
             }
 
             $path = $request->file('file')->store('images/' . $request->folder);
