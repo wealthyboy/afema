@@ -1,6 +1,6 @@
 #!/bin/bash
 
-cd /home/forge/avenuemontaigne.ng || exit
+cd /home/forge/avenuene.ng || exit
 
 # Use the full path to git just in case
 /usr/bin/git pull origin master
