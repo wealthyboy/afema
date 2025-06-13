@@ -9,6 +9,7 @@ use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Http\Request;
+use App\Notifications\UserRegisteredNotification;
 
 
 class RegisterController extends Controller
@@ -31,7 +32,7 @@ class RegisterController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = RouteServiceProvider::HOME;
+    protected $redirectTo = "/register";
 
     /**
      * Create a new controller instance.
@@ -52,11 +53,10 @@ class RegisterController extends Controller
     protected function validator(array $data)
     {
         return Validator::make($data, [
-            'first_name' => ['required', 'string', 'max:255'],
+            'name' => ['required', 'string', 'max:255'],
             'last_name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'phone_number' => ['required', 'string', 'max:20', 'unique:users'],
-            'password' => ['required', 'string', 'min:8', 'confirmed'],
         ]);
     }
 
@@ -70,14 +70,20 @@ class RegisterController extends Controller
     {
 
         $user = User::create([
-            'name' => $data['first_name'],
-            'last_name' => $data['last_name'],
-            'email' => $data['email'],
-            'phone_number' => $data['phone_number'],
+            'name' => data_get($data, 'name'),
+            'last_name' => data_get($data, 'last_name'),
+            'email' => data_get($data, 'email'),
+            'phone_number' => data_get($data, 'phone_number'),
             'type' => 'subscriber',
-            'code' => data_get($data, 'code'),
-            'password' => Hash::make($data['password']),
+            'dob' => data_get($data, 'dob'),
+            'preferred_way_to_contact' => data_get($data, 'preferred_way_to_contact'),
+            'password' => Hash::make(112233),
         ]);
+
+        //  $user->notify();
+
+        $user->notify(new UserRegisteredNotification());
+
 
         return $user;
     }
@@ -95,8 +101,6 @@ class RegisterController extends Controller
     protected function registered(Request $request, $user)
     {
 
-
-
         if ($request->ajax()) {
             return response()->json([
                 'loggenIn' => true,
@@ -104,7 +108,9 @@ class RegisterController extends Controller
                 'user' => $user
             ], 200);
         }
-        return redirect()->intended($this->redirectPath());
+
+        auth()->logout();
+        return redirect()->intended($this->redirectPath())->with('success', 'Registration successful! Welcome to the Afemai Association of Canada. We’re excited to have you on board.');
     }
 
 

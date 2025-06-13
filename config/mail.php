@@ -85,8 +85,8 @@ return [
     */
 
     'from' => [
-        'address' => env('MAIL_FROM_ADDRESS', 'noreply@avenuemontaigne.ng'),
-        'name' =>  'Avenue Montaigne',
+        'address' => env('MAIL_FROM_ADDRESS', 'noreply@afemaiassociationofcanada.com'),
+        'name' => 'Afemai Association of Canada',
     ],
 
     /*

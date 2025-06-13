@@ -2,13 +2,12 @@
 @section('content')
 
 <header>
-  <div class="page-header min-vh-75 h-28 position-relative" style="background-image: url(https://drive.google.com/thumbnail?id=1DTtgCelVMLA0F2HRS1mJw_U_b5gaksbg&sz=w2000); background-position: top;" loading="lazy">
+  <div class="page-header min-vh-75 h-28 position-relative" style="background-image: url(/images/utility/main-banner.jpeg); background-position: top;" loading="lazy">
     <span class="position-absolute top-0 start-0 w-100 h-100  bg-black opacity-50"></span>
     <div class="container">
       <div class="row">
         <div class="col-lg-8 mx-auto text-white text-center">
           <h1 class="title text-white">{{ $information->title }}</h1>
-
         </div>
       </div>
     </div>

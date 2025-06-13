@@ -9,14 +9,12 @@
 
 <body>
    <div id="app" class="appp">
-      <nav class="navbar main-background  navbar-expand-lg " id="sectionsNav">
+      <nav class="navbar   navbar-expand-lg " id="sectionsNav">
          @include('_partials.header2')
       </nav>
 
       <div class="main  index-page">
          @yield('content')
-
-
       </div>
 
 

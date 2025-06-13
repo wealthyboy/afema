@@ -76,9 +76,9 @@ label.error {
   cursor: pointer;
 }
 
-svg {
-  width: 18px;
-  height: 18px;
+svg.core-values {
+  width: 50px;
+  height: 50px;
 }
 
 .svg-icon-text {
@@ -234,7 +234,6 @@ svg#date-outline {
 .card-background-image {
   background-position: center center;
   background-repeat: no-repeat;
-  height: 600px;
   position: relative;
   cursor: pointer;
   color: $white;
@@ -1485,7 +1484,7 @@ carousel-fade .carousel-item {
 }
 
 .primary-border {
-  border: 2px solid #342c27;
+  border: 2px solid #23116b;
 
 }
 
@@ -1502,11 +1501,11 @@ carousel-fade .carousel-item {
 }
 
 .main-background {
-  background-color: #342c27 !important;
+  background-color: #23116b !important;
 }
 
 .primary-color {
-  color: #342c27 !important;
+  color: #23116b !important;
 }
 
 .navbar-toggler-icon {
@@ -1514,7 +1513,7 @@ carousel-fade .carousel-item {
 }
 
 .underline {
-  background-color: #342c27;
+  background-color: #23116b;
   height: 4px;
   transform: skewX(-30deg);
   width: 84px;
@@ -1525,7 +1524,7 @@ carousel-fade .carousel-item {
 }
 
 .custom-border-bottom {
-  border-bottom: 1px solid #342c27;
+  border-bottom: 1px solid #23116b;
 }
 
 
@@ -1706,7 +1705,7 @@ svg.uitk-icon-medium {
 }
 
 .owl-theme .owl-dots .owl-dot span:before {
-  background-color: #342c27 !important;
+  background-color: #23116b !important;
   border-radius: 0%;
   content: "";
   display: block;
@@ -1774,7 +1773,7 @@ svg.uitk-icon-medium {
 }
 
 .owl-theme .owl-dots .owl-dot span:before {
-  background-color: #342c27 !important;
+  background-color: #23116b !important;
   border-radius: 0%;
   content: "";
   display: block;
@@ -1853,7 +1852,7 @@ svg.uitk-icon-medium {
   height: 37px !important;
   min-height: 2rem !important;
   background-color: transparent !important;
-  color: #342c27 !important;
+  color: #23116b !important;
   border-radius: 50% !important;
   position: absolute;
   top: 50% !important;
@@ -1926,7 +1925,7 @@ svg.uitk-icon-medium {
 
 .flatpickr-day.today {
   border-color: #959ea9;
-  background-color: #342c27;
+  background-color: #23116b;
   border-color: transparent !important;
   color: white;
 }
@@ -2056,7 +2055,7 @@ a.modal-close {
   height: 3rem !important;
   min-height: 2rem !important;
   background-color: #fff !important;
-  color: #342c27 !important;
+  color: #23116b !important;
   border-radius: 50% !important;
   position: absolute;
   display: flex;

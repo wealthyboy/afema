@@ -23,6 +23,7 @@ Route::group(['middleware' => 'admin', 'prefix' => 'admin'], function () {
     Route::resource('visits', 'Admin\Visits\VisitsController', ['names' => 'admin.visits']);
     Route::resource('abandoned-carts', 'Admin\AbandonedCarts\AbandonedCartsController', ['names' => 'admin.abandoned_carts']);
 
+    Route::resource('events',  'Admin\Events\EventsController', ['names' => 'admin.events']);
 
 
     Route::resource('check-in', 'Admin\Reservations\ReservationsController', ['names' => 'admin.check-in']);
@@ -97,69 +98,68 @@ Route::group(['middleware' => 'admin', 'prefix' => 'admin'], function () {
 });
 
 
-Route::group(['middleware' => ['currencyByIp', 'tracking']], function () {
-    Route::get('/', 'HomeController@home');
-    Route::get('/luxury-service-apartments-in-lagos', 'HomeController@home');
-    Route::get('/luxury-service-apartments-in-ikoyi', 'Apartments\ApartmentsController@apartments');
-    Route::get('home', 'HomeController@index');
-    Route::get('account', 'Account\AccountController@index');
-    Route::post('password/reset/link', 'Auth\ForgotPasswordController@sendResetLinkEmail');
-    Route::post('reset/password', 'Auth\ForgotPasswordController@reset');
-    Route::get('change/password', 'ChangePassword\ChangePasswordController@index');
-    Route::post('change/password', 'ChangePassword\ChangePasswordController@index');
-    Route::post('guests', 'Guests\GuestsController@store');
-    Auth::routes();
-    Route::get('register/listings', 'Auth\RegisterMerchantController@create');
-    Route::post('register/listings', 'Auth\RegisterMerchantController@store');
-    Route::get('accounts/apartments', 'Apartments\ApartmentsController@apartments');
-    Route::get('login/{service}', 'Auth\SocialLoginController@redirect');
-    Route::get('login/{service}/callback', 'Auth\SocialLoginController@callback');
-    Route::post('abandoned-cart', 'AbandonedCart\AbandonedCartsController@store');
-    Route::put('abandoned-cart/{id}', 'AbandonedCart\AbandonedCartsController@update');
+Route::get('/', 'HomeController@home');
+Route::get('/luxury-service-apartments-in-lagos', 'HomeController@home');
+Route::get('/luxury-service-apartments-in-ikoyi', 'Apartments\ApartmentsController@apartments');
+Route::get('home', 'HomeController@index');
+Route::get('account', 'Account\AccountController@index');
+Route::post('password/reset/link', 'Auth\ForgotPasswordController@sendResetLinkEmail');
+Route::post('reset/password', 'Auth\ForgotPasswordController@reset');
+Route::get('change/password', 'ChangePassword\ChangePasswordController@index');
+Route::post('change/password', 'ChangePassword\ChangePasswordController@index');
+Route::post('guests', 'Guests\GuestsController@store');
+Auth::routes();
+Route::get('register/listings', 'Auth\RegisterMerchantController@create');
+Route::post('register/listings', 'Auth\RegisterMerchantController@store');
+Route::get('accounts/apartments', 'Apartments\ApartmentsController@apartments');
+Route::get('login/{service}', 'Auth\SocialLoginController@redirect');
+Route::get('login/{service}/callback', 'Auth\SocialLoginController@callback');
+Route::post('abandoned-cart', 'AbandonedCart\AbandonedCartsController@store');
+Route::put('abandoned-cart/{id}', 'AbandonedCart\AbandonedCartsController@update');
 
 
-    Route::post('login', 'Auth\LoginController@login');
-    Route::get('pages/{information}', 'Information\InformationController@show');
-    Route::get('apartments', 'Apartments\ApartmentsController@apartments');
-    Route::get('apartments/in/{location}', 'Apartments\ApartmentsController@location');
-    Route::resource('profile/bookings', 'ProfileBookings\\ProfileBookingsController');
-    Route::get('profile/apartments', 'ProfileApartments\\ProfileApartmentsController@index');
-    Route::get('profile/apartments/{property_id}', 'ProfileApartments\\ProfileApartmentsController@apartments');
-    Route::resource('profile', 'Profile\\ProfileController', ['names' => 'profiles']);
-    Route::get('apartment/{apartment}', 'Apartments\ApartmentsController@show')->name('apartments.show');
-    Route::get('add/apartment', 'Properties\PropertiesController@addApartment');
-    Route::post('check/apartment/availablility', 'Apartments\ApartmentsController@checkAvailability');
-    Route::get('checkout/{room}', 'Checkout\CheckoutController@index');
-    Route::get('book/{property}', 'Booking\BookingController@book');
-    Route::post('book/delete/{id}', 'Booking\BookingController@destroy');
-    Route::post('book/store', 'Booking\BookingController@store');
-    Route::post('book/coupon', 'Booking\BookingController@coupon');
-    Route::post('/api/saved', 'Api\Favorites\FavoritesController@store');
-    Route::resource('reservations', 'Reservation\ReservationController', ['names' => 'reservations']);
-    Route::get('get/location/{id}', 'Properties\PropertiesController@getLocation');
-    Route::get('property/search', 'Properties\PropertiesController@search');
-    Route::get('auto-complete', 'Properties\PropertiesController@autoComplete');
-    Route::get('property/{property}', 'Properties\PropertiesController@show');
-    Route::get('properties/{category}', 'Properties\PropertiesController@index');
-    Route::get('check-in', 'SignUp\SignUpController@index');
-    Route::post('check-in', 'SignUp\SignUpController@store');
+Route::post('login', 'Auth\LoginController@login');
+Route::get('pages/{information}', 'Information\InformationController@show');
+Route::get('apartments', 'Apartments\ApartmentsController@apartments');
+Route::get('apartments/in/{location}', 'Apartments\ApartmentsController@location');
+Route::resource('profile/bookings', 'ProfileBookings\\ProfileBookingsController');
+Route::get('profile/apartments', 'ProfileApartments\\ProfileApartmentsController@index');
+Route::get('profile/apartments/{property_id}', 'ProfileApartments\\ProfileApartmentsController@apartments');
+Route::resource('profile', 'Profile\\ProfileController', ['names' => 'profiles']);
+Route::get('apartment/{apartment}', 'Apartments\ApartmentsController@show')->name('apartments.show');
+Route::get('add/apartment', 'Properties\PropertiesController@addApartment');
+Route::post('check/apartment/availablility', 'Apartments\ApartmentsController@checkAvailability');
+Route::get('checkout/{room}', 'Checkout\CheckoutController@index');
+Route::get('book/{property}', 'Booking\BookingController@book');
+Route::post('book/delete/{id}', 'Booking\BookingController@destroy');
+Route::post('book/store', 'Booking\BookingController@store');
+Route::post('book/coupon', 'Booking\BookingController@coupon');
+Route::post('/api/saved', 'Api\Favorites\FavoritesController@store');
+Route::resource('reservations', 'Reservation\ReservationController', ['names' => 'reservations']);
+Route::get('get/location/{id}', 'Properties\PropertiesController@getLocation');
+Route::get('property/search', 'Properties\PropertiesController@search');
+Route::get('auto-complete', 'Properties\PropertiesController@autoComplete');
+Route::get('property/{property}', 'Properties\PropertiesController@show');
+Route::get('properties/{category}', 'Properties\PropertiesController@index');
+Route::get('check-in', 'SignUp\SignUpController@index');
+Route::post('check-in', 'SignUp\SignUpController@store');
+Route::get('/events', 'Events\EventsController@index');
 
-    Route::post('block', 'SignUp\SignUpController@block');
+Route::post('block', 'SignUp\SignUpController@block');
+Route::get('listings', 'Listings\ListingsController@index');
+Route::post('webhook/payment', 'WebHook\WebHookController@payment');
+Route::post('webhook/github', 'WebHook\WebHookController@gitHub');
+Route::get('/experience',   'Pages\PageController@index');
+Route::get('/gallery',   'Pages\PageController@index');
+Route::get('/download-images',  'DownLoad\DownLoadController@index');
+Route::get('/download-images/{id}',  'DownLoad\DownLoadController@downloadImages');
 
-    Route::get('listings', 'Listings\ListingsController@index');
-    Route::post('webhook/payment', 'WebHook\WebHookController@payment');
-    Route::post('webhook/github', 'WebHook\WebHookController@gitHub');
-    Route::get('/experience',   'Pages\PageController@index');
-    Route::get('/gallery',   'Pages\PageController@index');
-    Route::get('/download-images',  'DownLoad\DownLoadController@index');
-    Route::get('/download-images/{id}',  'DownLoad\DownLoadController@downloadImages');
+Route::get('/about-us',  'Pages\PageController@index');
+Route::get('/contact-us', 'Pages\PageController@index');
+Route::get('/virtual-tour', 'Pages\PageController@index');
+Route::post('file/uploads', 'Uploads\UploadsController@upload');
+Route::get('qr-checkin', 'QrCode\\QrCodeController@generateQRCode');
 
-    Route::get('/about-us',  'Pages\PageController@index');
-    Route::get('/contact-us', 'Pages\PageController@index');
-    Route::get('/virtual-tour', 'Pages\PageController@index');
-    Route::post('file/uploads', 'Uploads\UploadsController@upload');
-    Route::get('qr-checkin', 'QrCode\\QrCodeController@generateQRCode');
-});
 
 
 

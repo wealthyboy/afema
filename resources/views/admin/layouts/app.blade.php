@@ -33,6 +33,17 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
 
+    <style>
+        .form-group label.control-label {
+            font-size: 11px;
+            line-height: 1.0714285718;
+            color: #000;
+            font-weight: 400;
+            margin: 16px 0 0 0;
+            font-weight: 600;
+        }
+    </style>
+
 
 
 </head>
@@ -98,133 +109,12 @@
 
                     </li>
 
-                    @if(auth()->user()->email !== 'frontdesk@avenuemontaigne.ng')
-
-                    <li class="{{ $helper->active_link(['category','attributes','vouchers','category']) }} ">
-                        <a data-toggle="collapse" href="#Properties">
-                            <i class="fa fa-home" aria-hidden="true"></i>
-                            <p> Properties
-                                <b class="caret"></b>
-                            </p>
-                        </a>
-
-                        <div class="collapse 
-                       {{ $helper->active_link([
-                        'properties',
-                        'category',
-                        'fine_art',
-                        'discounts',
-                        'attributes',
-                        'vouchers',
-                        'sizes']) ? 'in' : ''}}" id="Properties">
-                            <ul class="nav">
-                                <li class="{{ $helper->active_link(['apartments']) }} ">
-                                    <a href="{{ route('admin.properties.index') }}">
-                                        <span class="sidebar-mini"> A </span>
-                                        <span class="sidebar-normal"> Properties </span>
-                                    </a>
-                                </li>
-
-                                <li class="{{ $helper->active_link(['apartments']) }} ">
-                                    <a href="{{ route('admin.apartments.index') }}">
-                                        <span class="sidebar-mini"> A </span>
-                                        <span class="sidebar-normal"> Apartments </span>
-                                    </a>
-                                </li>
-
-                                <li class="{{ $helper->active_link(['agents']) }} ">
-                                    <a href="{{ route('admin.sublets.index') }}">
-                                        <span class="sidebar-mini"> A </span>
-                                        <span class="sidebar-normal"> Sub-Lets </span>
-                                    </a>
-                                </li>
-
-                                <li class="{{ $helper->active_link(['attributes']) }} ">
-                                    <a href="{{ route('attributes.index') }}">
-                                        <span class="sidebar-mini"> A</span>
-                                        <span class="sidebar-normal"> Attributes </span>
-                                    </a>
-                                </li>
-
-                                <li class="{{ $helper->active_link(['category']) }}">
-                                    <a href="{{ route('category.index',['type'=>'category']) }}">
-                                        <span class="sidebar-mini"> C </span>
-                                        <span class="sidebar-normal"> Categories </span>
-                                    </a>
-                                </li>
-
-                                <li class="{{ $helper->active_link(['vouchers']) }} ">
-                                    <a href="{{ route('vouchers.index') }}">
-                                        <span class="sidebar-mini"> V </span>
-                                        <span class="sidebar-normal"> Vouchers </span>
-                                    </a>
-                                </li>
-
-                                <li class="{{ $helper->active_link(['peak_periods']) }} ">
-                                    <a href="{{ route('peak_periods.index') }}">
-                                        <span class="sidebar-mini"> PP </span>
-                                        <span class="sidebar-normal"> Peak Periods </span>
-                                    </a>
-                                </li>
-
-                                <li class="{{ $helper->active_link(['blocks']) }} ">
-                                    <a target="_blank" href="/admin/blocks">
-                                        <span class="sidebar-mini"> BA </span>
-                                        <span class="sidebar-normal"> Block Apartment </span>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </li>
-                    @endif
 
 
 
 
 
-                    <li class="{{ $helper->active_link(['reservations']) }}">
-                        <a data-toggle="collapse" href="dashboard.html#shop">
-                            <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-                            <p> Reservations
-                                <b class="caret"></b>
-                            </p>
-                        </a>
 
-                        <div class="collapse {{ $helper->active_link(['reservations']) ? 'in' : ''}}" id="shop">
-                            <ul class="nav">
-                                <li>
-                                    <a href="{{ route('admin.reservations.index', ['coming_from' => 'payment']) }}">
-                                        <span class="sidebar-mini"> C </span>
-                                        <span class="sidebar-normal"> Reservations </span>
-                                    </a>
-                                </li>
-
-                                <li>
-                                    <a href="{{ route('admin.reservations.index', ['coming_from' => 'checkin']) }}">
-                                        <span class="sidebar-mini"> C </span>
-                                        <span class="sidebar-normal"> Check-in </span>
-                                    </a>
-                                </li>
-
-                                <li>
-                                    <a href="{{ route('admin.abandoned_carts.index', ['coming_from' => 'abandoned_carts']) }}">
-                                        <span class="sidebar-mini"> A </span>
-                                        <span class="sidebar-normal"> Abandoned Checkout </span>
-                                    </a>
-                                </li>
-
-                                <li>
-                                    <a href="{{ route('admin.visits.index', ['coming_from' => 'visits']) }}">
-                                        <span class="sidebar-mini"> V </span>
-                                        <span class="sidebar-normal"> Visits </span>
-                                    </a>
-                                </li>
-
-                            </ul>
-                        </div>
-                    </li>
-
-                    @if(auth()->user()->email !== 'frontdesk@avenuemontaigne.ng')
                     <li class="{{ $helper->active_link(['pages']) }} ">
                         <a href="{{ route('pages.index') }}">
                             <i class="fa fa-info-circle" aria-hidden="true"></i>
@@ -232,19 +122,8 @@
                             </p>
                         </a>
                     </li>
-                    <li class="{{ $helper->active_link(['media']) }} ">
-                        <a href="{{ route('media.index') }}">
-                            <i class="fa fa-info-circle" aria-hidden="true"></i>
-                            <p> Media</p>
-                        </a>
-                    </li>
 
-                    <li class="{{ $helper->active_link(['galleries']) }} ">
-                        <a href="{{ route('admin.galleries.index') }}">
-                            <i class="fa fa-info-circle" aria-hidden="true"></i>
-                            <p> Gallery</p>
-                        </a>
-                    </li>
+
 
                     <li class="{{ $helper->active_link(['banners']) }} ">
                         <a data-toggle="collapse" href="dashboard.html#Design">
@@ -260,6 +139,14 @@
                                     <a href="{{ route('banners.index') }}">
                                         <span class="sidebar-mini"><i class="fa fa-circle"></i></span>
                                         <span class="sidebar-normal"> Banners</span>
+                                    </a>
+                                </li>
+
+
+                                <li class="{{ $helper->active_link(['events']) }}">
+                                    <a href="{{ route('admin.events.index') }}">
+                                        <span class="sidebar-mini"><i class="fa fa-circle"></i></span>
+                                        <span class="sidebar-normal"> Events</span>
                                     </a>
                                 </li>
 
@@ -283,78 +170,27 @@
                                     </a>
                                 </li>
 
-                                <li class="{{ $helper->active_link(['agents']) }} ">
-                                    <a href="{{ route('admin.agents.index') }}">
-                                        <span class="sidebar-mini"><i class="fa fa-circle"></i></span>
-                                        <span class="sidebar-normal"> Agents</span>
-                                    </a>
-                                </li>
+
 
                                 <li class="{{ $helper->active_link(['customers']) }} ">
                                     <a href="{{ route('customers.index') }}">
                                         <span class="sidebar-mini"><i class="fa fa-circle"></i></span>
-                                        <span class="sidebar-normal"> Customers</span>
+                                        <span class="sidebar-normal"> Members</span>
                                     </a>
                                 </li>
                             </ul>
                         </div>
                     </li>
-                    <li class="{{ $helper->active_link(['brands','shipping','location','system']) }} ">
-                        <a data-toggle="collapse" href="dashboard.html#Local">
-                            <i class="material-icons">image</i>
-                            <p> Local
-                                <b class="caret"></b>
+
+                    <li class="{{ $helper->active_link(['settings']) }} ">
+                        <a href="{{ route('settings.index') }}">
+                            <i class="fa fa-sliders" aria-hidden="true"></i>
+                            <p> Settings
                             </p>
                         </a>
-
-                        <div class="collapse {{ $helper->active_link(['permissions','shipping','location','settings','rates']) ? 'in' : ''}}" id="Local">
-                            <ul class="nav">
-
-
-
-                                <li class="{{ $helper->active_link(['location']) }} ">
-                                    <a href="{{ route('location.index') }}">
-                                        <span class="sidebar-mini"> CS </span>
-                                        <span class="sidebar-normal"> Country/States </span>
-                                    </a>
-                                </li>
-                                <li class="{{ $helper->active_link(['permissions']) }} ">
-                                    <a href="{{ route('permissions.index') }}">
-                                        <span class="sidebar-mini"> PM </span>
-                                        <span class="sidebar-normal"> Permission </span>
-                                    </a>
-                                </li>
-
-
-                                <li class="{{ $helper->active_link(['rates']) }} ">
-                                    <a href="{{ route('rates.index') }}">
-                                        <span class="sidebar-mini"> CR </span>
-                                        <span class="sidebar-normal"> Currency Rates </span>
-                                    </a>
-                                </li>
-                                <!-- <li>
-                            <a href="{{-- route('permissions.index') --}}">
-                                <span class="sidebar-mini"> PM </span>
-                                <span class="sidebar-normal"> Payment Gateway </span>
-                            </a>
-                        </li> -->
-                                <li class="{{ $helper->active_link(['settings']) }} ">
-
-                                    <a href="{{ route('settings.index') }}">
-                                        <span class="sidebar-mini"> S </span>
-                                        <span class="sidebar-normal"> System </span>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
                     </li>
-                    <li class="{{ $helper->active_link(['promos']) }} ">
-                        <a href="{{ route('promos.index') }}">
-                            <i class="fa fa-gift" aria-hidden="true"></i>
-                            <p> Promo </p>
-                        </a>
-                    </li>
-                    @endif
+
+
                 </ul>
             </div>
         </div>

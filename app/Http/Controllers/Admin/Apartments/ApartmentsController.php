@@ -57,7 +57,7 @@ class ApartmentsController extends Controller
      * return \Illuminate\Http\Response
      */
     public function index(Request $request)
-    {   
+    {
         //$this->updateBedrooms();
         $apartments = Apartment::orderBy('created_at', 'desc')->paginate(10);
         return view('admin.apartments.index', compact('apartments'));
@@ -190,7 +190,7 @@ class ApartmentsController extends Controller
             $apartment->attributes()->sync(array_filter($request->apartment_facilities_id));
         }
 
-        
+
 
 
         $this->syncImages($room_images, $apartment);

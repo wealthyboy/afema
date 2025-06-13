@@ -1,55 +1,34 @@
+@inject('helper', 'App\Http\Helper')
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 
-<head>
-   <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1">
-   <title>Under Construction | Afemai Association of Canada</title>
-   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-   <style>
-      body {
-         background: #f9f9f9;
-         min-height: 100vh;
-         display: flex;
-         justify-content: center;
-         align-items: center;
-         flex-direction: column;
-         text-align: center;
-         padding: 20px;
-      }
 
-      .logo {
-         max-width: 200px;
-         margin-bottom: 30px;
-      }
 
-      h1 {
-         font-weight: 700;
-         color: #2c3e50;
-      }
 
-      p {
-         color: #555;
-         font-size: 1.1rem;
-      }
-
-      .footer {
-         margin-top: 30px;
-         font-size: 0.9rem;
-         color: #999;
-      }
-   </style>
-</head>
+@include('_partials.header_styles')
 
 <body>
+   <div id="app" class="app">
+      <nav class="navbar  navbar-fixed-top navbar-expand-lg   navbar-absolute" color-on-scroll="100" id="sectionsNav">
+         @include('_partials.header', ['show_logo' => true, 'show_book' => true])
+      </nav>
+      <div id="content" class="main index-page">
+         @yield('content')
+      </div>
+      @include('_partials.footer')
+      </footer>
+   </div>
 
-   <img src="/images/logo/afemia_logo.jpeg" alt="Afemai Logo" class="logo">
+   @include('_partials.modal')
 
-   <h1>We're Under Construction</h1>
-   <p>Thank you for visiting the Afemai Association of Canada.<br>
-      Our website is currently under construction. We’ll be here soon with our new site.</p>
 
-   <div class="footer">© {{ date('Y') }} Afemai Association of Canada</div>
+   <script src="/js/services_js.js?version={{ str_random(6) }}"></script>
+
+   @yield('page-scripts')
+   <script type="text/javascript">
+      @yield('inline-scripts')
+   </script>
 
 </body>
 

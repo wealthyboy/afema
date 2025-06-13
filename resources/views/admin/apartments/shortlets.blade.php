@@ -5,7 +5,6 @@
    </div>
    <div class="wizard-navigation">
       <ul>
-
          <li><a href="wizard.html#ProductVariations" data-toggle="tab">Aprtment</a></li>
       </ul>
    </div>
@@ -151,14 +150,7 @@
 
 
                   <div class="col-md-12 bed mb-5">
-                     <div id="bedroom-dropdowns-container">  
-
-               
-
-
-                 
-
-                     </div>
+                     <div id="bedroom-dropdowns-container"></div>
                   </div>
                   <div class="col-md-12">
                      <div class="form-group label-floating">
@@ -241,9 +233,6 @@
 
                   <div class="col-md-12 mt-1 pr-5 ">
                      <h4 class="text-capitalize">Room Extras</h4>
-
-
-
                      @foreach($extras as $child)
                      <div class="mt-2 mb-2">
                         <div class=" d-flex">

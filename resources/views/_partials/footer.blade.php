@@ -14,7 +14,8 @@
                 </ul>
             </div>
             <div class="col-md-12 copyright text-center">
-                <p class="">© Copyright Avenue Montaigne {{ date('Y') }}. All rights reserved.
+                <p class="">© Copyright Afemai Association of Canada
+                    {{ date('Y') }}. All rights reserved.
                     @if ( auth()->check() && auth()->user()->isAdmin() )
                     <a target="_blank" class="text-white" href="/admin">Go to Admin</a>
                     @endif

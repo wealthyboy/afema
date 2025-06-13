@@ -11,9 +11,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 class Permission extends Model
 {
     //
-    use SoftDeletes, HasFactory;
+    use  HasFactory;
 
-    protected $fillable =['code','name'];
-
-    
+    protected $fillable = ['code', 'name'];
 }

@@ -46,6 +46,71 @@
       }
    </script>
 
+   <style>
+      .map-wrapper {
+         position: relative;
+         width: 100%;
+         height: 100vh;
+         background-color: #db342e;
+         overflow: hidden;
+      }
+
+      .map-svg {
+         width: 100%;
+         height: 100%;
+         object-fit: cover;
+      }
+
+      .indicator {
+         position: absolute;
+         top: 6%;
+         left: 21%;
+         transform: translate(-50%, -50%);
+         width: 20px;
+         height: 20px;
+      }
+
+      .ripple {
+         position: absolute;
+         width: 100%;
+         height: 100%;
+         border: 2px solid #db342e;
+         border-radius: 50%;
+         animation: ripple 1.5s infinite ease-out;
+      }
+
+      .dot {
+         position: absolute;
+         width: 10px;
+         height: 10px;
+         background: #ff6f00;
+         border-radius: 50%;
+         top: 5px;
+         left: 5px;
+         z-index: 2;
+      }
+
+      .overlay {
+         transition: opacity 0.3s ease;
+      }
+
+      .hover-opacity-100:hover {
+         opacity: .3 !important;
+      }
+
+      @keyframes ripple {
+         0% {
+            transform: scale(1);
+            opacity: 0.7;
+         }
+
+         100% {
+            transform: scale(4);
+            opacity: 0;
+         }
+      }
+   </style>
+
    <!-- Google tag (gtag.js) -->
    <script async src="https://www.googletagmanager.com/gtag/js?id=G-HF8HXV7C7C"></script>
    <script>

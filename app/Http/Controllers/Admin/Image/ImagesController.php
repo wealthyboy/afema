@@ -5,7 +5,7 @@ namespace App\Http\Controllers\Admin\Image;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Image;
-use App\Models\SystemSetting;
+use App\Models\Setting;
 use Illuminate\Support\Facades\Storage;
 
 
@@ -17,7 +17,7 @@ class ImagesController extends Controller
 
     public function __construct()
     {
-        $this->settings =  SystemSetting::first();
+        $this->settings =  Setting::first();
     }
 
 
@@ -26,9 +26,7 @@ class ImagesController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
-    {
-    }
+    public function index() {}
 
 
     /**

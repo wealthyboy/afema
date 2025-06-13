@@ -5,13 +5,19 @@
 <!--Content-->
 <section class="sec-padding">
    <div class="container">
-      <div class="row justify-content-center">
-         <div class="ml-1 col-md-7   mr-1">
+      <div class="d-flex justify-content-center align-items-center">
+         <div class="ml-1 col-md-7 mr-1">
             <div class=" mt-4 mb-4">
-               <form method="POST" class=" pl-4 pr-4" action="/register">
+               @if(session('success'))
+               <div class="d-flex justify-content-center align-items-center " style="min-height: 100vh;">
+                  <p class="bold-2">{{ session('success') }}</p>
+
+               </div>
+               @else
+               <form method="POST" class=" pl-4 pr-4 border" action="/register">
                   <div class="text-center">
                      <h2 class="bold-3">Register</h2>
-                     <p class=""> Have access to your bookings history , .e.t.c</p>
+                     <p class="">Join the Afemai Group to receive updates, connect with the community, and be part of something meaningful.</p>
                   </div>
                   @csrf
 
@@ -26,8 +32,7 @@
                   <div class="form-row">
                      <div class="form-group bmd-form-group col-6">
                         <label class="bmd-label-floating">First name</label>
-                        <input id="first_name" type="text" class="form-control" name="first_name" value="{{ old('first_name') }}" required>
-
+                        <input id="first_name" type="text" class="form-control" name="name" value="{{ old('name') }}" required>
                      </div>
 
 
@@ -44,31 +49,37 @@
                      </div>
 
                      <div class="form-group bmd-form-group col-md-6 col-12">
-                        <label class="bmd-label-floating">Phone</label>
+                        <label class="bmd-label-floating ">Phone</label>
                         <input id="phone_number" type="text" class="form-control" name="phone_number" value="{{ old('phone_number') }}" required>
                      </div>
 
-                     <div class="form-group bmd-form-group col-md-6 col-12">
-                        <label class="bmd-label-floating">Confirm Password</label>
-                        <input id="password" type="password" class="form-control" name="password_confirmation" required>
+                     <div class="form-group bmd-form-group col-md-12 col-12">
+                        <label class="bmd-label-floating">Address</label>
+                        <input id="Address" type="text" class="form-control" name="address" required>
+                     </div>
+
+                     <div class="form-group bmd-form-group col-md-12 col-12">
+                        <label class="bmd-label-floating">Date of birth</label>
+                        <input type="text" id="checkin" class="form-control " name="date_of_birth" required>
 
                      </div>
 
-                     <div class="form-group bmd-form-group col-md-6 col-12">
-                        <label class="bmd-label-floating">Password</label>
-                        <input id="password" type="password" class="form-control" name="password" required>
+                     <div class="form-group bmd-form-group col-md-12 col-12  align-items-center">
+                        <select required="true" name="preferred_way_to_contact" id="mySelect" class="form-control ">
+                           <option selected value="">Preferred way to contact</option>
+                           <option value="email">Email</option>
+                           <option value="phone">Phone</option>
+                        </select>
                      </div>
 
                   </div>
 
                   <button type="submit" id="login_form_button" data-loading="Loading" class=" ml-1 btn btn-primary btn-round btn-lg btn-block" name="login" value="Log in">Submit</button>
 
-                  <div class="mt-4 pt-4 text-center border-top">
-                     <p class="form-group col-12">
-                        Have an account? <a class="color--primary bold-2" href="/login">Login</a></p>
-                     </p>
-                  </div>
+
                </form>
+
+               @endif
             </div>
          </div>
       </div>
@@ -76,3 +87,9 @@
 </section>
 <!--End Content-->
 @endsection
+@section('page-scripts')
+<script src="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.7.1/min/dropzone.min.js" integrity="sha512-En/Po50Bl8kIECa2WkhxhdYeoKDcrJpBKMo9tmbuwbm9RxHWZV8/Y5xM9sh3QbrnFgM3hVR/2umJ33qGJk45pQ==" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+<script src="{{ asset('js/jquery.validate.min.js') }}"></script>
+<script src="{{ asset('js/upload.js') }}"></script>
+@stop

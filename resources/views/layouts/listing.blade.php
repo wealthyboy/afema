@@ -6,10 +6,9 @@
 
 
 <body>
-   <div id="app" class="appp">
+   <div id="app" class="app">
 
-
-      <nav class="navbar  navbar-fixed-top navbar-expand-lg  navbar-transparent navbar-absolute" color-on-scroll="100" id="sectionsNav">
+      <nav class="navbar  navbar-fixed-top navbar-expand-lg  navbar- navbar-absolute" color-on-scroll="100" id="sectionsNav">
          @include('_partials.header', ['show_logo' => true, 'show_book' => false])
       </nav>
 
@@ -30,15 +29,7 @@
       @yield('inline-scripts');
    </script>
 
-   <script>
-      let currencyDropdown = document.getElementById('currencyDropdown');
-      if (currencyDropdown) {
-         currencyDropdown.addEventListener('click', function() {
-            this.classList.add('show');
-            this.querySelector('.dropdown-menu').classList.add('show');
-         });
-      }
-   </script>
+
 
 </body>
 
