@@ -59,7 +59,7 @@
                   <div id="c1" class="carousel slide" data-ride="carousel">
                      <div class="carousel-inner">
                         <div class="carousel-item active">
-                           <img title="STAY IN THE HEART OF LAGOS Avenue montaigne" src="/images/banners/FjBy7BBU6m7W6qoflrpU2qgzYPXAvWzfwNm4Bb3O.jpg" itemprop="image" class="d-block w-100  image-class" alt="STAY IN THE HEART OF LAGOS avenue montaigne">
+                           <img title="aBOUT " src="https://afemaiassociationofcanada.com/images/banners/FFyG2YJMIeVAHmsd1toogdj7fojUvWcQMuA5oIig.jpg" itemprop="image" class="d-block w-100  image-class" alt="STAY IN THE HEART OF LAGOS avenue montaigne">
                         </div>
                      </div>
                   </div>
