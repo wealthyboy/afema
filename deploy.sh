@@ -1,6 +1,6 @@
 #!/bin/bash
 
-cd /home/forge/avenuene.ng || exit
+cd /home/forge/afema.com || exit
 
 # Use the full path to git just in case
 /usr/bin/git pull origin master
