@@ -29,6 +29,10 @@ class HomeController
 
 
 
+        return view('index', compact(
+            'banners',
+            'event'
+        ));
         if (!$site_status->make_live) {
             return view('index', compact(
                 'banners',
@@ -81,10 +85,12 @@ class HomeController
             );
         } else {
             //Show site if admin is logged in
-            if (auth()->check()  && auth()->user()->isAdmin()) {
+            if (auth()->check()) {
                 return view('index', compact(
                     'sliders',
                     'banners',
+                    'event'
+
 
                 ));
             }
