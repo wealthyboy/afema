@@ -14,7 +14,7 @@ class AlterSettingsTableAddPdfAgainPath extends Migration
     public function up()
     {
         Schema::table('settings', function (Blueprint $table) {
-            $table->string('image')->nullable();
+            $table->string('pdf_path')->nullable();
         });
     }
 
