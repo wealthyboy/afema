@@ -53,7 +53,7 @@ class InformationController extends Controller
 		$info->custom_link = $request->custom_link;
 		$info->image = $request->image;
 		$info->same_page = $request->same_page == 'yes' ? true : false;
-		$info->parent_id = $request->parent_id;
+		$info->parent_id = $request->parent_id ? $request->parent_id : 0;
 		$info->slug = str_slug($request->title);
 		$info->save();
 		return redirect()->route('pages.index')->with('status', 'created');
@@ -87,7 +87,7 @@ class InformationController extends Controller
 		$page->custom_link = $request->custom_link;
 		$page->image = $request->image;
 		$page->same_page = $request->same_page == 'yes' ? true : false;
-		$page->parent_id = $request->parent_id;
+		$page->parent_id = $request->parent_id ? $request->parent_id : 0;
 		$page->slug = str_slug($request->title);
 		$page->save();
 		return redirect()->route('pages.index')->with('status', 'created');
