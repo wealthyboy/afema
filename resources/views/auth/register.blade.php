@@ -3,7 +3,7 @@
 @section('content')
 
 <!--Content-->
-<section class="sec-padding">
+<section class="sec-padding bg-light mb-5">
    <div class="container">
       <div class="d-flex justify-content-center align-items-center">
          <div class="ml-1 col-md-7 mr-1">
@@ -14,7 +14,7 @@
 
                </div>
                @else
-               <form method="POST" class=" pl-4 pr-4 border" action="/register">
+               <form method="POST" class=" pl-4 pr-4 border bg-white" action="/register">
                   <div class="text-center">
                      <h2 class="bold-3">Register</h2>
                      <p class="">Join the Afemai Group to receive updates, connect with the community, and be part of something meaningful.</p>

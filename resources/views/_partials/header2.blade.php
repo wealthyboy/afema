@@ -4,7 +4,7 @@
         <a href="/" class="navbar-brand" itemprop="url">
             <div class="logo-small" itemprop="name">
                 <img src="https://afemaiassociationofcanada.com/images/logo/afemia_logo.jpeg" alt="" itemprop="logo" srcset="">
-                <span class="">Afemaiassociationofcanada</span>
+                <span class="bold-2">AfemaiAssociationOfCanada</span>
             </div>
         </a>
 

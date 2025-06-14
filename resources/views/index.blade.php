@@ -2,7 +2,7 @@
 @section('content')
 
 
-<div class="video-section">
+<div class="video-section mb-2">
 
 
    <div id="sm-main-banner" class="main-banner owl-carousel owl-theme d-block d-sm-none slider">
@@ -39,13 +39,15 @@
 
 </div>
 
-
-
-<div class="search-header d-block   p-3">
-   <div class="container text-center light-background pb-4 pt-1 primary-border rounded shadow" bis_skin_checked="1">
-      Promoting Unity, Culture, Social Engagement, and Development Among Afemai People in Canada
+<div class="   p-3">
+   <div class="container-fluid text-center  pb-4 pt-1 primar rounded shadow" bis_skin_checked="1">
+      <i>
+         Promoting Unity, Culture, Social Engagement, and Development Among Afemai People in Canada
+      </i>
    </div>
 </div>
+
+
 
 
 
@@ -67,7 +69,7 @@
                <div class="col-lg-5 col-md-12 welcome text-center d-flex justify-content-center align-items-center" itemprop="description">
                   <div class="about-panel bg-right-panel bg-panel-white bg-panel p-sm-3 p-md-5">
                      <div class="primary-color">Experience community, culture, and connection</div>
-                     <h2>Welcome to Afemai Association of Canada </h2>
+                     <h2>This is the Afemai Association of Canada </h2>
                      <p class="mt-4 text-left text-black light-bold">
                         The Afemai Association of Canada (AAC) is a non-profit, non-political social and cultural organization established to serve the interests of Afemai people residing in Canada and North America...
                      </p>
@@ -83,6 +85,13 @@
       </div>
    </div>
 </div>
+
+
+
+
+
+
+
 
 
 <div style="background-color: rgb(248, 245, 244);" class="ap mb-3">
@@ -160,6 +169,34 @@
 
 
 
+<section class="py-5 bg-lig mb-5">
+   <div id="lbox3" class="opacity-0 container">
+      <h2 class="mb-4 text-center">Upcoming Events</h2>
+      <p class="mb-1 text-center">Don’t miss out on the exciting moments we have planned!</p>
+
+      <div class="row">
+         <!-- Example Event Card -->
+         <div class="col-md-12 col-lg-12 mb-4">
+            <div class="card h-100 shadow-sm border-0">
+               <div class="card-body">
+                  <h5 class="card-title">Afemai Boat Cruise 2025</h5>
+                  <p class="card-text text-muted">
+                     Join us for an unforgettable cruise filled with fun, networking, and celebration of our vibrant culture.
+                  </p>
+                  <p class="card-text fw-bold text-primary">
+                     Date: August 17, 2024
+                  </p>
+               </div>
+            </div>
+         </div>
+
+         <!-- Add more event cards as needed -->
+      </div>
+   </div>
+</section>
+
+
+
 <div class="container-fluid">
    <div class="row vh-100">
       <!-- Left Panel -->
@@ -183,25 +220,29 @@
 
 
 
-<div class="container-fluid mb-2">
-   <div class="flex justify-content-between">
-      <h2>
-         Latest Events
-      </h2>
-      <a href="" class="hre">View All Events</a>
+<div class="container-fluid mb-">
+   <div class="d-flex justify-content-between align-items-center mb-3">
+      <div>
+         <h2>
+            Latest Events
+         </h2>
+         <p>
+            Stay connected with our most recent gatherings, celebrations, and community moments.
+         </p>
+
+      </div>
+      <a href="/events" class="bold-2 border">View All Events</a>
    </div>
    <div class="row g-0 p-0">
 
       @foreach($event->images as $index => $image)
       <div class="col-12 col-md-3 p-0 {{ $index < 3 ? 'd-none d-md-block' : '' }}">
-         <a href="http://" target="_blank" rel="noopener noreferrer">
+         <a href="/events" target="_blank" rel="noopener noreferrer">
             <div class="position-relative cursor-pointer">
                <img src="{{ $image->image }}" alt="Gallery image {{ $index + 1 }}" class="img-fluid w-100  shadow">
 
                <div class="overlay position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center text-white bg-dark bg-opacity-50 rounded opacity-0 hover-opacity-100 transition-opacity">
-                  @if($index === 3)
-                  <span class="fw-bold">View All Images</span>
-                  @endif
+                  <span class="bold-2 text-white">{{$event->title}}</span>
                </div>
             </div>
          </a>

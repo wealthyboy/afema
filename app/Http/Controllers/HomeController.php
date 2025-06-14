@@ -74,6 +74,12 @@ class HomeController
             $query->limit(8);
         }])->where('type', 'present')->first();
 
+        return view('index', compact(
+            'banners',
+            'event',
+            'sliders'
+        ));
+
         if (!optional($site_status)->make_live) {
             return view(
                 'index',

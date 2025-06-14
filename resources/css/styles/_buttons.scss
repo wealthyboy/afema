@@ -211,3 +211,32 @@
     margin: 0;
   }
 }
+
+.btn.btn-primary {
+  color: #fff;
+  background-color: #24126b;
+  border-color: #24126b;
+  box-shadow: 0 2px 2px 0 rgba(52, 44, 39, 0.14), 0 3px 1px -2px rgba(52, 44, 39, 0.2), 0 1px 5px 0 rgba(52, 44, 39, 0.12);
+}
+
+/* Outline‑style secondary button in your custom brand colour */
+.btn-outline-secondary {
+  /* base/normal state */
+  border: 1px solid #d6251a !important;
+  background-color: #fff !important;
+  color: #e27d71 !important;   /* keeps the text same as the border */
+}
+
+.btn-outline-secondary:hover,
+.btn-outline-secondary:focus,
+.btn-outline-secondary:active,
+.btn-outline-secondary.active,
+.show > .btn-outline-secondary.dropdown-toggle {
+  /* filled state on hover/active/focus */
+  background-color: #d6251a !important;
+  color: #fff !important;      /* flips to white text for contrast */
+  border-color: #e27d71 !important;
+}
+
+
+

@@ -3,20 +3,23 @@
         <a href="/" class="navbar-brand" itemprop="url">
             <div class="logo-small">
                 <img src="https://afemaiassociationofcanada.com/images/logo/afemia_logo.jpeg" alt="" itemprop="logo" srcset="">
-                <span class="bold-2">AfemaiAssociationOfCanada</span>
+                <span class="bold-2 ">Afemai</span>
             </div>
         </a>
-        <ul class="nav justify-content-center">
-            <li class="nav-item">
-                <a class="nav-link fw-bold bold-3 text-primary" href="/pages/about-us" itemprop="url">About Us</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link fw-bold bold-3" href="/events" itemprop="url">Events</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link fw-bold bold-3" href="/contact-us" itemprop="url">Contact Us</a>
-            </li>
-        </ul>
+        <div class="d-none d-lg-block">
+            <ul class="nav justify-content-center ">
+                <li class="nav-item">
+                    <a class="nav-link fw-bold bold-3 text-primary" href="/pages/about-us" itemprop="url">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link fw-bold bold-3" href="/events" itemprop="url">Events</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link fw-bold bold-3" href="/contact-us" itemprop="url">Contact Us</a>
+                </li>
+            </ul>
+        </div>
+
         <div class="d-flex justify-content-center align-items-center">
             <a href="/register" class="d-none d-lg-block  bold-2 mr-4 btn btn-outline-secondary" itemprop="url">Register</a>
             <button class="navbar-toggler d-block text-white border-none" type="button" data-toggle="collapse" aria-expanded="false" aria-label="Toggle navigation">
@@ -29,14 +32,13 @@
     </div>
     <div class="collapse navbar-collapse">
         <ul class="nav navbar-nav navbar-center w-100 mt-5">
-            <li class="w-100 py-3 font-weight-bold bold-3" itemprop="name">
+            <li class="w-100 font-weight-bold bold-3" itemprop="name">
                 <a href="/pages/about-us" itemprop="url">About Us</a>
             </li>
 
             <li class="w-100 py-3 font-weight-bold bold-3" itemprop="name">
                 <a href="/events" itemprop="url">Events</a>
             </li>
-
 
             <li class="w-100 font-weight-bold bold-3" itemprop="name">
                 <a href="/contact-us" itemprop="url">Contact Us</a>
