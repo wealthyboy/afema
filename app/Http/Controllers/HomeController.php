@@ -24,18 +24,22 @@ class HomeController
 
 
         $site_status = Live::first();
-        $banners =  Banner::banners()->get();
+        $banners = Banner::banners()->get();
+        $event = Event::with('images')->first();
+
 
 
         if (!$site_status->make_live) {
             return view('index', compact(
                 'banners',
+                'event'
             ));
         } else {
             //Show site if admin is logged in
             if (auth()->check()) {
                 return view('index', compact(
                     'banners',
+                    'event'
                 ));
             }
             return view('underconstruction.index');

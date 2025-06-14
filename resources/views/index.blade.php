@@ -192,7 +192,7 @@
    </div>
    <div class="row g-0 p-0">
 
-      @foreach($sliders as $index => $image)
+      @foreach($event->images as $index => $image)
       <div class="col-12 col-md-3 p-0 {{ $index < 3 ? 'd-none d-md-block' : '' }}">
          <a href="http://" target="_blank" rel="noopener noreferrer">
             <div class="position-relative cursor-pointer">
