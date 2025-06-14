@@ -83,7 +83,7 @@ class InformationController extends Controller
 		]);
 		$page->title = $request->title;
 		$page->description = $request->description;
-		$page->sort_order = $request->sort_order;
+		$page->sort_order = $request->sort_order ?  $request->sort_order : 1;
 		$page->custom_link = $request->custom_link;
 		$page->image = $request->image;
 		$page->same_page = $request->same_page == 'yes' ? true : false;
