@@ -8,7 +8,7 @@
         </a>
         <ul class="nav justify-content-center">
             <li class="nav-item">
-                <a class="nav-link fw-bold bold-3" href="/pages/about-us" itemprop="url">About Us</a>
+                <a class="nav-link fw-bold bold-3 text-primary" href="/pages/about-us" itemprop="url">About Us</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link fw-bold bold-3" href="/events" itemprop="url">Events</a>
