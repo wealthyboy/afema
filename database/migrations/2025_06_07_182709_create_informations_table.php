@@ -15,15 +15,15 @@ class CreateInformationsTable extends Migration
     {
         Schema::create('informations', function (Blueprint $table) {
             $table->id();
-            $table->string('name')->nullble();
-            $table->integer('sort_order')->nullble();
-            $table->integer('parent_id')->nullble();
-            $table->text('meta_description')->nullble();
-            $table->text('meta_keywords')->nullble();
-            $table->text('meta_title')->nullble();
-            $table->string('slug')->nullble();
-            $table->boolean('same_page')->nullble();
-            $table->longText('description')->nullble();
+            $table->string('name')->nullable();
+            $table->integer('sort_order')->nullable();
+            $table->integer('parent_id')->nullable();
+            $table->text('meta_description')->nullable();
+            $table->text('meta_keywords')->nullable();
+            $table->text('meta_title')->nullable();
+            $table->string('slug')->nullable();
+            $table->boolean('same_page')->nullable();
+            $table->longText('description')->nullable();
             $table->timestamps();
         });
     }
