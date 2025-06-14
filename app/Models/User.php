@@ -20,7 +20,15 @@ class User extends Authenticatable
 	 * @var array
 	 */
 	protected $fillable = [
-		'code', 'name', 'last_name', 'email', 'phone_number', 'verified', 'password', 'permission', 'type'
+		'code',
+		'name',
+		'last_name',
+		'email',
+		'phone_number',
+		'verified',
+		'password',
+		'permission',
+		'type'
 	];
 
 	/**
@@ -29,7 +37,8 @@ class User extends Authenticatable
 	 * @var array
 	 */
 	protected $hidden = [
-		'password', 'remember_token',
+		'password',
+		'remember_token',
 	];
 
 
@@ -136,7 +145,7 @@ class User extends Authenticatable
 
 	public function scopeAdmin(Builder $builder)
 	{
-		return $builder->whereNull('type');
+		return $builder->where('type', 'Admin');
 	}
 
 

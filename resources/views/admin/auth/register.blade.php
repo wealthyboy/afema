@@ -58,12 +58,7 @@
                   <div class="row">
 
 
-                     <div class="checkbox">
-                        <label>
-                           <input type="checkbox" value="1" name="is_agent">
-                           <strong>Is Agent</strong>
-                        </label>
-                     </div>
+
 
                      <div class="col-md-6">
                         <select name="permission_id" class="form-control">

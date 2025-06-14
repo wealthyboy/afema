@@ -24,13 +24,6 @@
     </div>
 
     <div class="d-flex justify-content-between align-items-center">
-        <div class="checkbox flex-grow-1">
-            <label id="box50" class="checkbox-label">
-                <input for="box50" name="remember" value="1" class="" type="checkbox">
-                <span class="checkbox-custom rectangular"></span>
-                <span class="checkbox-label-text">Remember Me</span>
-            </label>
-        </div>
         <div class="text-right mt-2 ">
             <a class="bold-2" href="/password/reset">Forget your password?</a>
         </div>
@@ -42,7 +35,6 @@
 
     <div class="mt-4 pt-4 text-center border-top">
         <p class="form-group col-12 bold">
-            Dont have an account yet? <a class=" bold-2" href="/register">Create One</a></p>
         </p>
     </div>
 </form>
