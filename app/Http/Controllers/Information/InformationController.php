@@ -23,6 +23,7 @@ class InformationController extends Controller
 		$this->middleware('admin', ['except' => ['show']]);
 	}
 
+
 	public function  index(Request $request)
 	{
 

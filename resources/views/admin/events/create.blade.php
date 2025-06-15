@@ -13,7 +13,7 @@
             @include('errors.errors')
 
             <div class="card-content">
-                <h4 class="card-title">Banners</h4>
+                <h4 class="card-title">Events</h4>
                 <form enctype="multipart/form-data" method="post" action="{{ route('admin.events.store') }}" class="form-horizontal">
                     @csrf
 

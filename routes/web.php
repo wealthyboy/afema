@@ -127,7 +127,6 @@ Route::get('profile/apartments', 'ProfileApartments\\ProfileApartmentsController
 Route::get('profile/apartments/{property_id}', 'ProfileApartments\\ProfileApartmentsController@apartments');
 Route::resource('profile', 'Profile\\ProfileController', ['names' => 'profiles']);
 Route::get('apartment/{apartment}', 'Apartments\ApartmentsController@show')->name('apartments.show');
-Route::get('add/apartment', 'Properties\PropertiesController@addApartment');
 Route::post('check/apartment/availablility', 'Apartments\ApartmentsController@checkAvailability');
 Route::get('checkout/{room}', 'Checkout\CheckoutController@index');
 Route::get('book/{property}', 'Booking\BookingController@book');
@@ -159,6 +158,9 @@ Route::get('/contact-us', 'Pages\PageController@index');
 Route::get('/virtual-tour', 'Pages\PageController@index');
 Route::post('file/uploads', 'Uploads\UploadsController@upload');
 Route::get('qr-checkin', 'QrCode\\QrCodeController@generateQRCode');
+Route::resource('/members-signup', 'Members\NewMembersControllers', ['names' => 'members']);
+
+
 
 
 

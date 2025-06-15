@@ -45,7 +45,6 @@
                      <div class="form-group bmd-form-group col-md-6 col-12">
                         <label class="bmd-label-floating">Email</label>
                         <input id="email" type="email" class="form-control" name="email" value="{{ old('email') }}" required>
-
                      </div>
 
                      <div class="form-group bmd-form-group col-md-6 col-12">

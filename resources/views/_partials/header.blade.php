@@ -21,7 +21,7 @@
         </div>
 
         <div class="d-flex justify-content-center align-items-center">
-            <a href="/register" class="d-none d-lg-block  bold-2 mr-4 btn btn-outline-secondary" itemprop="url">Register</a>
+            <a href="/member" class="d-none d-lg-block  bold-2 mr-4 btn btn-outline-secondary" itemprop="url">Register</a>
             <button class="navbar-toggler d-block text-white border-none" type="button" data-toggle="collapse" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="sr-only">Toggle navigation</span>
                 <span class="navbar-toggler-icon text-white"></span>

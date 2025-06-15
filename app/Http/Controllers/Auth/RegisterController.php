@@ -69,6 +69,19 @@ class RegisterController extends Controller
     protected function create(array $data)
     {
 
+        $data = $request->validate([
+            'name'                      => ['required', 'string', 'max:255'],
+            'last_name'                 => ['required', 'string', 'max:255'],
+            'email'                     => ['required', 'email', 'max:255', 'unique:users,email'],
+            'phone_number'              => ['nullable', 'string', 'max:20'],
+            'dob'                       => ['nullable', 'date'],
+            'preferred_way_to_contact'  => ['nullable', 'in:email,phone,sms'],
+            // If you’d like the user to supply a password, add:
+            // 'password' => ['required', 'string', 'min:8', 'confirmed'],
+        ]);
+
+
+
         $user = User::create([
             'name' => data_get($data, 'name'),
             'last_name' => data_get($data, 'last_name'),
