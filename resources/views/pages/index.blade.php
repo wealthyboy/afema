@@ -49,6 +49,10 @@
     </div> <!-- /container -->
   </section>
 
+
+
+  @if (request()->path() !== 'pages/contact-us')
+
   <section class="bg-light py-5">
     <div class="container">
       <div class="row">
@@ -77,8 +81,6 @@
       </div>
     </div>
   </section>
-
-
 
   <div style="background-color: rgb(248, 245, 244);" class="ap mb-3">
     <div class="container-fluid">
@@ -174,7 +176,7 @@
   </div>
 
 
-
+  @endif
 
   @endsection
   @section('page-scripts')
