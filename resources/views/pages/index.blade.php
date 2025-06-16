@@ -156,14 +156,14 @@
   <div class="container-fluid mb-3">
     <div class="row vh-100">
       <!-- Left Panel -->
-      <div id="leftBox" style="z-index: 2;" class="col-md-5 d-flex flex-column justify-content-center align-items-start bg-light p-5">
+      <div id="leftBox" style="z-index: 2;" class="col-md-5 d-flex flex-column justify-content-center align-items-start  p-5">
         <h1 class="mb-4">Our Mission</h1>
         <p class="fs-5">
           To unite Afemai people in Canada by promoting our cultural heritage, encouraging meaningful social connections, and fostering development through advocacy, charitable initiatives, cultural preservation, and active community participation. </p>
       </div>
 
       <!-- Map Panel -->
-      <div id="rightBox" class="col-md-7 p-0">
+      <div id="rightBox" class="col-md-7 p-0 bg-white">
         <img class="img-fluid" src="/images/svg/equal-diamond-map.svg" class="grid-12 lazyload" alt="Map of the world">
         <div class="indicator">
           <div class="ripple"></div>
