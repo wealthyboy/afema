@@ -14,7 +14,7 @@ class AlterInformationsTableAddImage extends Migration
     public function up()
     {
         Schema::table('informations', function (Blueprint $table) {
-            $table->string('image')->nullable();
+            //$table->string('image')->nullable();
         });
     }
 

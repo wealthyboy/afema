@@ -5,6 +5,8 @@ namespace App\Http\Controllers\Admin\Customers;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\User;
+use App\Notifications\MembershipApproved;
+
 
 class CustomersController extends Controller
 {
@@ -18,9 +20,16 @@ class CustomersController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
         $users = (new User())->customers()->latest()->get();
+
+        if ($request->approve) {
+            $user = User::find($request->id);
+            $user->is_approved = true;
+            $user->save();
+            $user->notify(new MembershipApproved($user));
+        }
         return   view('admin.customers.index', compact('users'));
     }
 

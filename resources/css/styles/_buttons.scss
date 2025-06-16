@@ -219,6 +219,13 @@
   box-shadow: 0 2px 2px 0 rgba(52, 44, 39, 0.14), 0 3px 1px -2px rgba(52, 44, 39, 0.2), 0 1px 5px 0 rgba(52, 44, 39, 0.12);
 }
 
+.btn.btn-primary:hover,
+.btn.btn-primary:focus,
+.btn.btn-primary:active {
+  background-color: #160c40;  /* lighter shade on hover/focus/active */
+  border-color: #24126b;
+}
+
 /* Outline‑style secondary button in your custom brand colour */
 .btn-outline-secondary {
   /* base/normal state */

@@ -13,7 +13,7 @@ use App\Models\State;
 
 use Illuminate\Support\Facades\Validator;
 use App\Models\Permission;
-
+use App\Notifications\MembershipApproved;
 
 class UsersController extends Controller
 {
@@ -28,6 +28,9 @@ class UsersController extends Controller
 	public function index(Request $request)
 	{
 		$users = User::admin()->get();
+
+
+
 
 		return view('admin.users.index', compact('users'));
 	}

@@ -14,7 +14,7 @@ class AlterInformationsTableAddTitle extends Migration
     public function up()
     {
         Schema::table('informations', function (Blueprint $table) {
-            $table->string('title')->nullable();
+            // $table->string('title')->nullable();
         });
     }
 

@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Setting;
 use Illuminate\Http\Request;
 use App\Notifications\NewUserRegistered;
+use App\Notifications\WelcomeNewMember;
 use App\Models\User;
 
 class NewMembersControllers extends Controller
@@ -41,8 +42,6 @@ class NewMembersControllers extends Controller
 
         $data = $request->all();
 
-
-
         $data = $request->validate([
             'name' => ['required', 'string', 'max:255'],
             'last_name' => ['required', 'string', 'max:255'],
@@ -58,14 +57,18 @@ class NewMembersControllers extends Controller
             'email' => data_get($data, 'email'),
             'phone_number' => data_get($data, 'phone_number'),
             'type' => 'subscriber',
-            'dob' => data_get($data, 'dob'),
+            'address' => data_get($data, 'address'),
+            'city' => data_get($data, 'city'),
+            'dob' => data_get($data, 'date_of_birth'),
             'preferred_way_to_contact' => data_get($data, 'preferred_way_to_contact'),
             'password' => \Hash::make(112233),
         ]);
 
-        $user->notify(new NewUserRegistered($user));
 
-        \Notification::send($this->setting->email, new NewUserRegistered($user));
+        $user->notify(new WelcomeNewMember($user));
+
+        \Notification::route('mail', $this->setting->email)
+            ->notify(new NewUserRegistered($user));
 
         return redirect()->back()->with('success', 'Registration successful! Welcome to the Afemai Association of Canada. We’re excited to have you on board.');
 

@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class AlterBannersTableAddLinks extends Migration
+class AlterUsersTableAddIsAp extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,8 @@ class AlterBannersTableAddLinks extends Migration
      */
     public function up()
     {
-        Schema::table('banners', function (Blueprint $table) {
-
-            // $table->string('link')->nullable();
+        Schema::table('users', function (Blueprint $table) {
+            $table->boolean('is_approved')->nullable();
         });
     }
 
@@ -26,6 +25,8 @@ class AlterBannersTableAddLinks extends Migration
      */
     public function down()
     {
-        //
+        Schema::table('users', function (Blueprint $table) {
+            //
+        });
     }
 }

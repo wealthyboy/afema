@@ -188,8 +188,8 @@
 </div>
 
 
-
-<section class="py-5 bg-lig mb-5">
+@if (null !== $upcoming_event)
+<section style="background-color: rgb(248, 245, 244);" class="py-5  mb-5">
    <div id="lbox3" class="opacity-0 container">
       <h2 class="mb-4 text-center">Upcoming Events</h2>
       <p class="mb-1 text-center">Don’t miss out on the exciting moments we have planned!</p>
@@ -199,12 +199,12 @@
          <div class="col-md-12 col-lg-12 mb-4">
             <div class="card h-100 shadow-sm border-0">
                <div class="card-body">
-                  <h5 class="card-title">Afemai Boat Cruise 2025</h5>
+                  <h5 class="card-title">{{ $upcoming_event->title }}</h5>
                   <p class="card-text text-muted">
-                     Join us for an unforgettable cruise filled with fun, networking, and celebration of our vibrant culture.
+                     {{ $upcoming_event->description }}
                   </p>
                   <p class="card-text fw-bold text-primary">
-                     Date: August 17, 2024
+                     Date: {{ $upcoming_event->date_of_event}}
                   </p>
                </div>
             </div>
@@ -214,6 +214,8 @@
       </div>
    </div>
 </section>
+
+@endif
 
 
 <div class="container-fluid mb-">

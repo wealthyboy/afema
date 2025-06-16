@@ -19,6 +19,8 @@ function getFile(e, name, model = null, multiple = true, edit_mode = false) {
 
   let form = new FormData();
 
+
+
   form.append("file", file.files[0]);
   $.ajax({
     url: "/admin/upload/image?folder=events",

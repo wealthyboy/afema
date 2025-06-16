@@ -82,6 +82,8 @@ Route::group(['middleware' => 'admin', 'prefix' => 'admin'], function () {
     Route::post('logout',  'Auth\LoginController@logout')->name('admin_users_logout');
     Route::get('register', 'Admin\Users\UsersController@create')->name('create_admin_users');
     Route::post('register', 'Auth\RegisterController@register');
+    Route::get('users',  'Admin\Users\UsersController', ['names' => 'admin.users']);
+
     Route::resource('users',  'Admin\Users\UsersController', ['names' => 'admin.users']);
     Route::resource('customers', 'Admin\Customers\CustomersController', ['name' => 'customers']);
     //Route::resource('templates', 'Admin\Templates\TemplatesController',['name'=>'templates']);
@@ -159,9 +161,6 @@ Route::get('/virtual-tour', 'Pages\PageController@index');
 Route::post('file/uploads', 'Uploads\UploadsController@upload');
 Route::get('qr-checkin', 'QrCode\\QrCodeController@generateQRCode');
 Route::resource('/members-signup', 'Members\NewMembersControllers', ['names' => 'members']);
-
-
-
 
 
 

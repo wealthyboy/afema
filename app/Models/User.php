@@ -25,10 +25,15 @@ class User extends Authenticatable
 		'last_name',
 		'email',
 		'phone_number',
+		'address',
+		'city',
+		'state',
 		'verified',
 		'password',
 		'permission',
-		'type'
+		'type',
+		'preferred_way_to_contact',
+		'dob'
 	];
 
 	/**
@@ -58,9 +63,6 @@ class User extends Authenticatable
 		return $this->belongsToMany(Apartment::class, 'apartment_user');
 	}
 
-
-
-
 	public function products()
 	{
 		return $this->hasMany(Product::class);
@@ -76,10 +78,7 @@ class User extends Authenticatable
 		return $this->hasMany(Order::class);
 	}
 
-	public function carts()
-	{
-		return $this->hasMany(Cart::class);
-	}
+
 
 	public function favorites()
 	{

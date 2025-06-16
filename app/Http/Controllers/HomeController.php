@@ -74,6 +74,8 @@ class HomeController
             $query->limit(8);
         }])->where('type', 'present')->first();
 
+        $upcoming_event = Event::where('type', 'upcoming')->first();
+
 
 
         if (!optional($site_status)->make_live) {
@@ -82,7 +84,8 @@ class HomeController
                 [
                     'sliders' => $sliders,
                     'banners' => $banners,
-                    'event' => $event
+                    'event' => $event,
+                    'upcoming_event' => $upcoming_event
                 ]
             );
         } else {
@@ -91,9 +94,8 @@ class HomeController
                 return view('index', compact(
                     'sliders',
                     'banners',
-                    'event'
-
-
+                    'event',
+                    'upcoming_event'
                 ));
             }
             return view('underconstruction.index');

@@ -32,35 +32,63 @@
                         <div class="form-row">
                             <div class="form-group bmd-form-group col-6">
                                 <label class="bmd-label-floating">First name</label>
-                                <input id="first_name" type="text" class="form-control" name="name" value="{{ old('name') }}" required>
+                                <input id="first_name" type="text" class="form-control" name="name" value="{{ old('name') }}" required="true">
                             </div>
 
 
                             <div class="form-group bmd-form-group col-md-6 col-12">
                                 <label class="bmd-label-floating">Last name</label>
-                                <input id="last_name" type="text" class="form-control" name="last_name" value="{{ old('last_name') }}" required>
+                                <input id="last_name" type="text" class="form-control" name="last_name" value="{{ old('last_name') }}" required="true">
 
                             </div>
 
                             <div class="form-group bmd-form-group col-md-6 col-12">
                                 <label class="bmd-label-floating">Email</label>
-                                <input id="email" type="email" class="form-control" name="email" value="{{ old('email') }}" required>
+                                <input id="email" type="email" class="form-control" name="email" value="{{ old('email') }}" required="true">
                             </div>
 
                             <div class="form-group bmd-form-group col-md-6 col-12">
-                                <label class="bmd-label-floating ">Phone</label>
-                                <input id="phone_number" type="text" class="form-control" name="phone_number" value="{{ old('phone_number') }}" required>
+                                <label for="phone_number" class="bmd-label-floating">Phone</label>
+
+                                <div class="input-group">
+                                    {{-- Country code selector --}}
+                                    <select name="country_code"
+                                        class="form-select  border-0 flex-shrink-0 w-auto"
+                                        aria-label="Country code" {{-- for a11y --}}
+                                        required>
+                                        <option value="+1" {{ old('country_code') === '+1' ? 'selected' : '' }}>
+                                            🇨🇦 +1
+                                        </option>
+                                        <option value="+1-US" {{ old('country_code') === '+1-US' ? 'selected' : '' }}>
+                                            🇺🇸 +1&nbsp;(US)
+                                        </option>
+                                    </select>
+
+                                    {{-- Phone number --}}
+                                    <input id="phone_number"
+                                        type="tel"
+                                        class="form-control"
+                                        name="phone_number"
+                                        value="{{ old('phone_number') }}"
+                                        placeholder="555‑123‑4567"
+                                        required>
+                                </div>
                             </div>
+
 
                             <div class="form-group bmd-form-group col-md-12 col-12">
                                 <label class="bmd-label-floating">Address</label>
-                                <input id="Address" type="text" value="{{ old('address') }}" class="form-control" name="address" required>
+                                <input id="Address" type="text" class="form-control" name="address" required="true">
+                            </div>
+
+                            <div class="form-group bmd-form-group col-md-12 col-12">
+                                <label class="bmd-label-floating">City</label>
+                                <input id="Address" type="text" class="form-control" name="city" required="true">
                             </div>
 
                             <div class="form-group bmd-form-group col-md-12 col-12">
                                 <label class="bmd-label-floating">Date of birth</label>
-                                <input type="text" id="checkin" class="form-control " value="{{ old('date_of_birth') }}" name="date_of_birth" required>
-
+                                <input type="text" id="checkin" class="form-control " value="{{ old('date_of_birth') }}" name="date_of_birth" required="true">
                             </div>
 
                             <div class="form-group bmd-form-group col-md-12 col-12  align-items-center">

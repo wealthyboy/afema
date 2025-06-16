@@ -14,9 +14,9 @@
   </div>
 </header>
 
-<div style="background-color: #f8f5f4;">
+<div>
 
-  <section id="home">
+  <section style="background-color: #fff;" id="home">
     <div class="container">
       <div class="row justifiy-content-center">
         <div id="content" class="col-md-12  mb-5">

@@ -69,8 +69,9 @@
 
                                     <th>Email</th>
                                     <th>Phone</th>
-
                                     <th class="disabled-sorting text-right">Date</th>
+                                    <th class="disabled-sorting text-right"></th>
+
                                 </tr>
                             </thead>
 
@@ -90,6 +91,15 @@
                                     <td class="text-right">{{ $user->phone_number }}</td>
                                     <td class="text-right">
                                         {{ $user->created_at }}
+                                    </td>
+
+                                    <td class="text-right">
+                                        @if(!$user->is_approved)
+                                        <a href="/admin/customers?approve=true&id={{ $user->id }}" class="btn btn-success p-0 p-2 btn-sm">
+
+                                            Approve
+                                        </a>
+                                        @endif
                                     </td>
                                 </tr>
                                 @endforeach

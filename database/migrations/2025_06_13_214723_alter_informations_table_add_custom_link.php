@@ -14,7 +14,7 @@ class AlterInformationsTableAddCustomLink extends Migration
     public function up()
     {
         Schema::table('informations', function (Blueprint $table) {
-            $table->string('custom_link')->nullable();
+            //$table->string('custom_link')->nullable();
         });
     }
 
