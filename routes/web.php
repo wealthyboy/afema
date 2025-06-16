@@ -82,7 +82,6 @@ Route::group(['middleware' => 'admin', 'prefix' => 'admin'], function () {
     Route::post('logout',  'Auth\LoginController@logout')->name('admin_users_logout');
     Route::get('register', 'Admin\Users\UsersController@create')->name('create_admin_users');
     Route::post('register', 'Auth\RegisterController@register');
-    Route::get('users',  'Admin\Users\UsersController', ['names' => 'admin.users']);
 
     Route::resource('users',  'Admin\Users\UsersController', ['names' => 'admin.users']);
     Route::resource('customers', 'Admin\Customers\CustomersController', ['name' => 'customers']);
