@@ -15,7 +15,7 @@
                     <a class="nav-link fw-bold bold-3" href="/events" itemprop="url">Events</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link fw-bold bold-3" href="/contact-us" itemprop="url">Contact Us</a>
+                    <a class="nav-link fw-bold bold-3" href="/pages/contact-us" itemprop="url">Contact Us</a>
                 </li>
             </ul>
         </div>
@@ -41,7 +41,7 @@
             </li>
 
             <li class="w-100 font-weight-bold bold-3" itemprop="name">
-                <a href="/contact-us" itemprop="url">Contact Us</a>
+                <a href="/pages/contact-us" itemprop="url">Contact Us</a>
             </li>
         </ul>
     </div>
