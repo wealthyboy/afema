@@ -18,8 +18,7 @@
          <div class="card-content">
             <ul class="nav nav-pills nav-pills-warning">
                <li class="active"><a href="panels.html#pill1" data-toggle="tab">General</a></li>
-               <li class=""><a href="panels.html#carts" data-toggle="tab">Cart</a></li>
-               <li class=""><a href="panels.html#Addresses" data-toggle="tab">Addresses</a></li>
+
 
             </ul>
             <div class="tab-content">
