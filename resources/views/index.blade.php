@@ -232,7 +232,7 @@
       <a href="/events" class="bold-2 border">View All Events</a>
    </div>
    <div class="row g-0 p-0">
-      @if($event->images->count())
+      @if(null !== $event->images)
       @foreach($event->images as $index => $image)
       <div class="col-12 col-md-3 p-0 {{ $index < 3 ? 'd-none d-md-block' : '' }}">
          <a href="/events" target="_blank" rel="noopener noreferrer">
