@@ -34,7 +34,6 @@
                 To unite Afemai people in Canada by promoting our cultural heritage, encouraging meaningful social connections, and fostering development through advocacy, charitable initiatives, cultural preservation, and active community participation.
             </p>
             <div class="text-right text-end d-flex justify-content-end">
-                <a class="bold-2 btn btn-secondary border" href="http://">View Complete Info </a>
             </div>
         </div>
 
