@@ -78,7 +78,7 @@
                                 </div>
                                 <div class="col-md-4">
                                     <div class="form-group label-floating">
-                                        <label class="control-label">Store Email Address</label>
+                                        <label class="control-label"> Email Address</label>
                                         <input type="text" name="email" value="{{ null !== $setting  ? $setting->email : old('email')   }}" id="input-email" class="form-control" />
                                     </div>
                                 </div>
