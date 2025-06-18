@@ -49,6 +49,9 @@ class NewMembersControllers extends Controller
             'phone_number' => ['required', 'string', 'max:20', 'unique:users,phone_number'],
             'date_of_birth' => ['required'],
             'preferred_way_to_contact'  => ['required'],
+            'address'  => ['required'],
+            'city'  => ['required'],
+
         ]);
 
         $user = User::create([
