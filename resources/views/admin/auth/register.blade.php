@@ -64,7 +64,7 @@
                         <select name="permission_id" class="form-control">
                            <option value="" selected>Choose Permission</option>
                            @foreach($permissions as $permission )
-                           <option value="{{ $permission->id }}" selected>{{ $permission->name }}</option>
+                           <option value="{{ $permission->id }}">{{ $permission->name }}</option>
                            @endforeach
                         </select>
                      </div>
