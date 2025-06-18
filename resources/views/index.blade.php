@@ -5,16 +5,9 @@
 <div class="video-section mb-2">
 
 
-   <div id="sm-main-banner" class="main-banner owl-carousel owl-theme d-block d-sm-none slider">
-      @foreach($sliders as $key => $image)
-      <div data-bg-image="{{ $image->image }}" class=" bg-image-class {{  $key > 0 ? 'd-none' : '' }} item page-header min-vh-75 half-hv position-relative rounded-top">
-         <span class="position-absolute top-0 start-0 w-100 h-100 bg-black-2 opacity-50"></span>
-      </div>
-      @endforeach
-   </div>
 
 
-   <div id="main-banner" class="carousel slide carousel-fade d-none d-md-block" data-ride=" carousel">
+   <div id="main-banner" class="carousel slide carousel-fade " data-ride=" carousel">
       <ol class="carousel-indicators">
          @foreach($sliders as $key => $image)
          <li data-target="#main-banner" data-slide-to="{{ $key }}" class="{{ $key === 0 ? 'active' : ''}}"></li>
@@ -23,7 +16,7 @@
       <div class="carousel-inner header-filter">
          @foreach($sliders as $key => $image)
          <div class="carousel-item {{ $key === 0 ? 'active' : ''}} ">
-            <img src="{{ $image->image }}" class="d-block w-100" alt="...">
+            <img src="{{ $image->image }}" class="d-block w-100 carousel-img " alt="...">
          </div>
          @endforeach
       </div>
@@ -252,9 +245,7 @@
 </div>
 @endsection
 @section('page-scripts')
-<script src="https://cdn.amcharts.com/lib/5/index.js"></script>
-<script src="https://cdn.amcharts.com/lib/5/map.js"></script>
-<script src="https://cdn.amcharts.com/lib/5/geodata/worldLow.js"></script>
+
 @stop
 @section('inline-scripts')
 

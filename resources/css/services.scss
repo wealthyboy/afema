@@ -1,3 +1,4 @@
+@import "owl.carousel/dist/assets/owl.carousel.css";
 @import "../../public/css/all.css";
 // @import "~bootstrap-icons/font/bootstrap-icons.css";
 // @import "~bootstrap-select/sass/bootstrap-select.scss";
@@ -853,6 +854,8 @@ button.owl-next {
   }
 
 
+
+
   .bg-panel {
     position: relative;
     left: 0px;
@@ -884,6 +887,11 @@ button.owl-next {
 
   .bg-right-panel {
     margin-left: 0 !important;
+  }
+
+  .carousel-img {
+    height: 470px; /* or use vh like 80vh */
+    object-fit: cover; /* Makes it crop to fill without distortion */
   }
 }
 
@@ -1919,5 +1927,8 @@ a.modal-close {
 .carousel-indicators [data-bs-target] {
   transition: background-color .3s ease;
 }
+
+
+
 
 

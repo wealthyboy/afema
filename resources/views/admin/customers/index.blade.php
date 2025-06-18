@@ -96,7 +96,6 @@
                                     <td class="text-right">
                                         @if(!$user->is_approved)
                                         <a href="/admin/customers?approve=true&id={{ $user->id }}" class="btn btn-success p-0 p-2 btn-sm">
-
                                             Approve
                                         </a>
                                         @endif
