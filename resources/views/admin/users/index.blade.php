@@ -42,7 +42,6 @@
 
                                     <th>Full Name</th>
                                     <th>Email</th>
-                                    <th>Status</th>
 
                                     <th class="text-right">Date Added</th>
                                     <th class="disabled-sorting text-right">Actions</th>
@@ -61,7 +60,6 @@
                                     </td>
                                     <td> <a href="/users/{{$user->id}}" class=""> {{ $user->fullname() }} </a></td>
                                     <td>{{ $user->email }}</td>
-                                    <td>{{ $user->is_approved ? "Approved" : "Not apparoved" }}</td>
 
                                     <td class="text-right">{{ $user->created_at }}</td>
                                     <td class="text-right">
