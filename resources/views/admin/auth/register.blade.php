@@ -49,7 +49,7 @@
                      <div class="col-md-6">
                         <div class="form-group label-floating">
                            <label class="control-label">Password</label>
-                           <input id="password" required="true" type="text" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" value="{{ old('password') }}" autofocus>
+                           <input id="password" required="true" type="PASSWORD" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" value="{{ old('password') }}" autofocus>
                         </div>
                      </div>
 
@@ -64,7 +64,7 @@
                         <select name="permission_id" class="form-control">
                            <option value="" selected>Choose Permission</option>
                            @foreach($permissions as $permission )
-                           <option value="{{ $permission->id }}">{{ $permission->name }}</option>
+                           <option value="{{ $permission->id }}" selected>{{ $permission->name }}</option>
                            @endforeach
                         </select>
                      </div>

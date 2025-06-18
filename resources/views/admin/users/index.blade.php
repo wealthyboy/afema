@@ -59,16 +59,15 @@
                                             </label>
                                         </div>
                                     </td>
-                                    <td> <a href="/users/{{$user->id}}" class=""> {{ $user->fullname() }} fff</a></td>
+                                    <td> <a href="/users/{{$user->id}}" class=""> {{ $user->fullname() }} </a></td>
                                     <td>{{ $user->email }}</td>
                                     <td>{{ $user->is_approved ? "Approved" : "Not apparoved" }}</td>
 
                                     <td class="text-right">{{ $user->created_at }}</td>
                                     <td class="text-right">
-                                        <a href="/admin/users?approve=true&id={{ $user->id }}" class="btn btn-success p-0 p-2 btn-sm"> {{ $user->is_approved ? "Approved" : "Disapprove" }}</button>
-                                            <a href="{{ route('admin.users.edit',['user'=>$user->id]) }}" rel="tooltip" title="Edit" class="btn btn-primary btn-simple btn-xs">
-                                                <i class="material-icons">edit</i>
-                                            </a>
+                                        <a href="{{ route('admin.users.edit',['user'=>$user->id]) }}" rel="tooltip" title="Edit" class="btn btn-primary btn-simple btn-xs">
+                                            <i class="material-icons">edit</i>
+                                        </a>
                                     </td>
                                 </tr>
                                 @endforeach

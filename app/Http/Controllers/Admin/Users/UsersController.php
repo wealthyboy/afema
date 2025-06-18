@@ -28,10 +28,6 @@ class UsersController extends Controller
 	public function index(Request $request)
 	{
 		$users = User::admin()->get();
-
-
-
-
 		return view('admin.users.index', compact('users'));
 	}
 
@@ -74,6 +70,8 @@ class UsersController extends Controller
 		$this->validate($request, [
 			'first_name' => 'required|max:255',
 			'email' => 'required|email|max:255',
+			'phone_number' => ['required', 'string', 'max:20', 'unique:users,phone_number'],
+
 		]);
 
 

@@ -50,32 +50,13 @@
                             <div class="col-md-6">
                                 <div class="form-group label-floating">
                                     <label for="Password" class="control-label">Password</label>
-                                    <input id="Password" type="password" class="form-control" name="password"   >
+                                    <input id="Password" type="password" class="form-control" name="password">
                                 </div>
                             </div>
 
-                            <div class="col-md-6">
-                                <div class="form-group label-floating">
-                                    <label  class="control-label">Phone</label>
-                                    <input id="Password" required="true" type="text" class="form-control{{ $errors->has('phone_number') ? ' is-invalid' : '' }}" name="phone_number" value="{{ $user->phone_number }}" autofocus>
-                                </div>
-                            </div>
 
-                            <div class="checkbox">
-                                <label>
-                                    <input type="checkbox" {{ $user->type === 'agent' ? 'checked' : ''}} value="1" name="is_agent">
-                                    <strong>Is Agent</strong>
-                                </label>
-                            </div>
 
-                            <div class="col-md-6">
-                                <select name="permission_id" required="true" class="form-control">
-                                    <option value="" selected>Choose Permission</option>
-                                    @foreach($permissions as $permission )
-                                    <option value="{{ $permission->id }}">{{ $permission->name }}</option>
-                                    @endforeach
-                                </select>
-                            </div>
+
                         </div>
                     </div>
                     <div class="footer  pull-right ">
