@@ -29,7 +29,8 @@ class   NavComposer
 
 	public function compose(View $view)
 	{
-		$footer_info = Information::parents()->get();
+		$footer_info = Information::orderBy('sort_order', 'asc')
+			->get();
 		$system_settings = Setting::first();
 
 		$view->with([

@@ -1,6 +1,7 @@
 <footer class=" pt-8 pb-6 footer text-muted fixed-">
     <div class="container container-xxl">
 
+
         <div class="mt-0 mt-md-10 row">
             <div class="col-md-12 text-center">
                 <ul class="pull-center">

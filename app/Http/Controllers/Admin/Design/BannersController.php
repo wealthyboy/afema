@@ -103,11 +103,8 @@ class BannersController extends Controller
         $banner->sort_order = $request->sort_order;
         $banner->image = $request->image;
         $banner->type = $request->type;
-
         $banner->save();
 
-        // $flash = app( 'App\Http\flash' );
-        // $flash->success( "Success", "Details Updated" );
         return redirect()->route('banners.index');
     }
 
