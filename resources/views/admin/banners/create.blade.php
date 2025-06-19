@@ -24,6 +24,13 @@
                   </div>
                </div>
 
+               <div class="form-group">
+                  <label for="sort-order" class="col-sm-2 control-label">Sort Order</label>
+                  <div class="col-sm-10">
+                     <input id="sort-order" required="required" type="number" name="sort_order" value="{{ old('sort_order')   }}" class="form-control" id="inputPassword3" placeholder="sort order">
+                  </div>
+               </div>
+
 
 
 
