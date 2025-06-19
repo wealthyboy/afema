@@ -21,15 +21,9 @@
                   <label for="title" class="col-sm-2 control-label"> Title</label>
                   <div class="col-sm-10">
                      <input type="text" name="title" value="{{ !empty(  $banner->title )  ? $banner->title : old('title')   }}" class="form-control" id="title" placeholder="title">
+                  </div>
+               </div>
 
-                  </div>
-               </div>
-               <div class="form-group">
-                  <label for="sort-order" class="col-sm-2 control-label">Sort Order</label>
-                  <div class="col-sm-10">
-                     <input id="sort-order" required="required" type="number" name="sort_order" value="{{ !empty(  $banner->sort_order )  ? $banner->sort_order : old('sort_order')   }}" class="form-control" id="inputPassword3" placeholder="sort order">
-                  </div>
-               </div>
 
 
 
@@ -68,14 +62,6 @@
                </div>
 
 
-               <div class="form-group">
-                  <label>Description</label>
-                  <div class="form-group ">
-                     <label class="control-label"> </label>
-                     <textarea name="description"
-                        id="description" class="form-control" rows="7"></textarea>
-                  </div>
-               </div>
 
 
                <!-- /.box-body -->
