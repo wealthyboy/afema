@@ -76,10 +76,10 @@ class HomeController
             $query->limit(8);
         }])->where('type', 'present')->first();
 
-        $upcoming_event = Event::where('type', 'upcoming')->first();
-        $nextEvent = Event::where('type', 'upcoming')->whereDate('date_of_event', '>=', Carbon::today())
+        $upcoming_event = Event::where('type', 'upcoming')->whereDate('date_of_event', '>=', Carbon::today())
             ->orderBy('date_of_event', 'asc')
             ->first();
+
 
 
 
