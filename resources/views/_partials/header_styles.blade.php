@@ -17,6 +17,8 @@
    <!-- Main CSS File -->
    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
    <link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&display=swap" rel="stylesheet">
+   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
 
    <link href="/css/services_style.css?version={{ str_random(6) }}" rel="stylesheet">
    <link href="/css/banner.css?version={{ str_random(6) }}" rel="stylesheet">

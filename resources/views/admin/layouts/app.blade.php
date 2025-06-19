@@ -6,10 +6,10 @@
 <head>
 
     <meta charset="utf-8" />
-    <link rel="shortcut icon" type="image/x-icon" href="/imgs/favicon.ico">
-    <link rel="icon" href="/imgs/favicon.ico" type="image/x-icon">
-    <link rel="icon" type="image/png" href="/imgs/favicon.png">
-    <link rel="apple-touch-icon" href="/imgs/favicon.png">
+    <link rel="icon" type="image/x-icon" href="/images/favicon_io/favicon-32x32.png">
+    <link rel="shortcut icon" type="image/x-icon" href="/images/favicon_io/favicon.ico">
+    <link rel="icon" href="/images/favicon_io/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="/images/favicon_io/apple-touch-icon.png">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>{{ Config('app.name')}} | Admin</title>
@@ -271,7 +271,7 @@
 
                     </nav>
                     <p class="copyright pull-right">
-                        &copy; 2020<a href="/"> {{ Config('app.name')}} </a>
+                        &copy; {{date('Y')}}<a href="/"> {{ Config('app.name')}} </a>
                     </p>
                 </div>
             </footer>

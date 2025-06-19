@@ -14,6 +14,9 @@
                     @endforeach
                 </ul>
             </div>
+
+
+
             <div class="col-md-12 copyright text-center">
                 <p class="">© Copyright Afemai Association of Canada
                     {{ date('Y') }}. All rights reserved.
@@ -21,6 +24,15 @@
                     <a target="_blank" class="text-white" href="/admin">Go to Admin</a>
                     @endif
                 </p>
+
+                <div class="container">
+                    <a href="{{$system_settings->facebook_link}}" target="_blank" class="text-white mx-3 fs-4">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="{{$system_settings->instagram_link}}" target="_blank" class="text-white mx-3 fs-4">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
             </div>
         </div>
     </div>
