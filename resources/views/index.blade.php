@@ -8,7 +8,7 @@
 
 
    <div id="main-banner" class="carousel slide carousel-fade " data-ride=" carousel">
-      <ol class="carousel-indicators  custom-indicators">
+      <ol class="carousel-indicators  custom-indicaors">
          @foreach($sliders as $key => $image)
          <li data-target="#main-banner" data-slide-to="{{ $key }}" class="{{ $key === 0 ? 'active' : ''}}"></li>
          @endforeach
