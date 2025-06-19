@@ -90,8 +90,8 @@
 <div style="background-color: rgb(248, 245, 244);" class="ap mb-3">
    <div class="container-fluid">
       <div id="intro-box2" class="opacity-0 mt-4 mb-4">
-         <h2 class=" text-left" itemprop="name">Core Values</h2>
-         <div class="text-secondary text-left mt-2" itemprop="description">
+         <h2 class=" text-left heading-underline mb-3" itemprop="name">Core Values</h2>
+         <div class="text-secondary  text-left mt-2" itemprop="description">
             These values are the foundation of our commitment to excellence, integrity, and impact.
          </div>
       </div>
@@ -164,7 +164,7 @@
    <div class="row vh-100">
       <!-- Left Panel -->
       <div id="leftBox" style="z-index: 2;" class="col-md-5 d-flex flex-column justify-content-center align-items-start bg-light p-5">
-         <h1 class="mb-4">Our Mission</h1>
+         <h1 class="mb-4 heading-underline ">Our Mission</h1>
          <p class="fs-5">
             To unite Afemai people in Canada by promoting our cultural heritage, encouraging meaningful social connections, and fostering development through advocacy, charitable initiatives, cultural preservation, and active community participation. </p>
       </div>
@@ -192,7 +192,7 @@
          <div class="col-md-12 col-lg-12 mb-4">
             <div class="card h-100 shadow-sm border-0">
                <div class="card-body">
-                  <h5 class="card-title">{{ $upcoming_event->title }}</h5>
+                  <h5 class="card-title ">{{ $upcoming_event->title }}</h5>
                   <p class="card-text text-muted">
                      {!! $upcoming_event->description !!}
                   </p>
@@ -214,7 +214,7 @@
 <div class="container-fluid mb-">
    <div class="d-flex justify-content-between align-items-center mb-3">
       <div>
-         <h2>
+         <h2 class="heading-underline mb-4">
             Latest Events
          </h2>
          <p>
@@ -223,8 +223,7 @@
 
       </div>
       <a href="/events" class="bold-2 text-danger inline-flex items-center">
-         View All Events
-
+         View All Events >>>
       </a>
    </div>
    <div class="row g-0 p-0">
