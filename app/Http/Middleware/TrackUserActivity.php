@@ -2,15 +2,15 @@
 
 namespace App\Http\Middleware;
 
-use Closure;
-use Illuminate\Http\Request;
 
-namespace App\Http\Middleware;
+
 
 use Closure;
 use Illuminate\Http\Request;
 use App\Models\UserTracking;
 use Carbon\Carbon;
+use Illuminate\Support\Str;
+
 use Illuminate\Support\Facades\Session;
 
 
@@ -18,7 +18,60 @@ class TrackUserActivity
 {
     public function handle(Request $request, Closure $next)
     {
+
         $response = $next($request);
+        $sessionId = session()->getId();
+        $path = $request->fullUrl();
+
+        if ($request->ajax() && $request->ignore === "true") {
+            return $response;
+        }
+
+        if (!Str::contains(request()->path(), 'admin')) {
+            UserTracking::updateOrInsert(
+                ['session_id' => $sessionId,  'page_url' => $path],
+                [
+                    'ip_address' => $request->ip(),
+                    'user_agent' => $this->detectDevice($request),
+                    'referer' => $request->headers->get('referer'),
+                    'user_id' => optional(auth()->user())->id,
+                    'visited_at' => now(),
+                    'method' => $request->method(),
+                    'ip_address' => $request->ip(),
+                    'action' => $request->action ?  $request->action : "viewed",
+                    'page_url' => $request->fullUrl(),
+                    'visited_at' => now(),
+                    'created_at' => now(),
+                    'referer' => $request->headers->get('referer'),
+                ]
+            );
+        }
+
+
+        if (!Session::has('tracking_id')) {
+            $last_id = UserTracking::latest('id')->value('id');
+            if ($last_id) {
+                Session::put('tracking_id', $last_id);
+            }
+        }
+
         return $response;
+    }
+
+
+
+    public function detectDevice(Request $request)
+    {
+        $userAgent = $request->header('User-Agent');
+
+        if (preg_match('/mobile/i', $userAgent)) {
+            $device = 'mobile';
+        } elseif (preg_match('/tablet|ipad/i', $userAgent)) {
+            $device = 'tablet';
+        } else {
+            $device = 'desktop';
+        }
+
+        return $device;
     }
 }

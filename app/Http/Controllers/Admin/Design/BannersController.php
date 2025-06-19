@@ -99,17 +99,13 @@ class BannersController extends Controller
     {
 
         $banner = Banner::find($id);
-        $this->validate($request, [
-            'link' => 'required',
-            'sort_order' => 'required',
-        ]);
-
         $banner->title = $request->title;
         $banner->sort_order = $request->sort_order;
-        $banner->image   = $request->image;
-        $banner->type   = $request->type;
+        $banner->image = $request->image;
+        $banner->type = $request->type;
 
         $banner->save();
+
         // $flash = app( 'App\Http\flash' );
         // $flash->success( "Success", "Details Updated" );
         return redirect()->route('banners.index');
