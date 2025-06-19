@@ -8,7 +8,7 @@
 
 
    <div id="main-banner" class="carousel slide carousel-fade " data-ride=" carousel">
-      <ol class="carousel-indicators">
+      <ol class="carousel-indicators  custom-indicators">
          @foreach($sliders as $key => $image)
          <li data-target="#main-banner" data-slide-to="{{ $key }}" class="{{ $key === 0 ? 'active' : ''}}"></li>
          @endforeach
@@ -184,7 +184,8 @@
 @if (null !== $upcoming_event)
 <section style="background-color: rgb(248, 245, 244);" class="py-5  mb-5">
    <div id="lbox3" class="opacity-0 container">
-      <h2 class="mb-4 text-center">Upcoming Events</h2>
+      <h2 class="mb-4 text-center heading-underline mb-4">Upcoming Events</h2>
+
       <p class="mb-1 text-center">Don’t miss out on the exciting moments we have planned!</p>
 
       <div class="row">
