@@ -28,10 +28,10 @@ class HomeCtrl extends Controller
      public function index()
      {
 
-          $totalUsers        = User::count();
+          $totalUsers  = User::where('type', 'subscriber')->count();
 
           // “new” = registered today
-          $newUsersToday     = User::whereDate('created_at', Carbon::today())->count();
+          $newUsersToday = User::whereDate('created_at', Carbon::today())->count();
 
           // “new this month”
           $newUsersThisMonth = User::whereYear('created_at', Carbon::now()->year)
