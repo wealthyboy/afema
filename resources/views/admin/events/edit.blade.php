@@ -33,7 +33,6 @@
                                 class="form-control  datepicker pull-right"
                                 value="{{ $helper::getReversedFormatedDate($event->date_of_event) }}"
                                 name="date_of_event"
-
                                 type="text">
                         </div>
                     </div>
@@ -44,8 +43,8 @@
                         <div class="col-sm-6">
                             <select name="type" required="required" class="form-control select2" style="width: 100%;">
                                 <option value="" selected="selected">--choose one--</option>
-                                <option {{ $event->type === 'present' ? 'selected' : ''}} value="present">Present</option>
-                                <option {{ $event->type === 'upcoming' ? 'selected' : ''}}value="upcoming">Upcoming</option>
+                                <option {{ $event->type === 'present' ? ' selected' : ''}} value="present">Present</option>
+                                <option {{ $event->type === 'upcoming' ? ' selected' : ''}} value="upcoming">Upcoming </option>
                             </select>
                         </div>
                     </div>
@@ -68,7 +67,7 @@
 
                     <div class="col-sm-12">
                         <div id="j-drop" class="j-drop">
-                            <input accept="image/*" data-msg="Upload  at least 5 images" onchange="getFile(this,'images[]')" class="upload_input" multiple="true" type="file" id="upload_file_input" name="product_image" />
+                            <input accept="image/*" data-msg="Upload  at least 5 images" onchange="handleFiles(this,'images[]')" class="upload_input" multiple="true" type="file" id="upload_file_input" name="product_image" />
                             <div class=" upload-text {{ $event->images->count() ||  $event->image ? 'hide' : ''}}">
                                 <a class="" href="#">
                                     <img class="" src="/backend/img/upload_icon.png">

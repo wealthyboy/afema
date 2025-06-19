@@ -60,7 +60,7 @@
 
                     <div class="col-sm-12">
                         <div id="j-drop" class="j-drop">
-                            <input accept="image/*" required="true" data-msg="Upload  at least 5 images" onchange="getFile(this,'images[]')" class="upload_input" multiple="true" type="file" id="upload_file_input" name="product_image" />
+                            <input accept="image/*" required="true" data-msg="Upload  at least 5 images" onchange="handleFiles(this,'images[]')" class="upload_input" multiple="true" type="file" id="upload_file_input" name="product_image" />
                             <div class="upload-text">
                                 <a class="" href="#">
                                     <img src="/backend/img/upload_icon.png">

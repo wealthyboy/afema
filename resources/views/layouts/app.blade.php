@@ -25,7 +25,7 @@
 
 
 
-   <script src="/js/services_js.js?version={{ str_random(6) }}"></script>
+   <script src="/js/services_js.js?version={{ str_random(6) }}"> </script>
 
    @yield('page-scripts')
    <script type="text/javascript">

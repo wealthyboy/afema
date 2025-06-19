@@ -24,7 +24,7 @@
 
 
     <!-- Map Panel -->
-    <div class="row mb-1 mt vh-100">
+    <div class="row mb-2 mt vh-100">
         <!-- Left Panel -->
         <div id="leftBox-{{$key}}" style="z-index: 2;" class=" {{$loop->iteration % 2 == 0? 'order-2 order-md-1' : 'order-1 order-md-2' }} col-md-5 d-flex flex-column justify-content-center align-items-start bg-light p-5">
             <a href="http://">
