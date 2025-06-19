@@ -181,85 +181,12 @@ $(document).on("click", ".remove-image", function (e) {
 
 jQuery(function () {
   localStorage.setItem("allow_variation", true);
-  $(document).on("change", ".bedrooms", function (e) {
-    console.log(true);
-    let self = $(this);
-    let value = self.val();
-    let bed = self.parentsUntil(".v-panel").find(".bed");
-    if (value == "") return;
+ 
 
-    for (var i = 1; i <= 5; i++) {
-      bed.find(".bedroom-" + i).addClass("d-none");
-    }
+ 
 
-    for (var i = 1; i <= value; i++) {
-      bed.find(".bedroom-" + i).removeClass("d-none");
-    }
-  });
 
-  $(".cancel :checkbox").on("change", function (e) {
-    $(".cancellation-message").toggleClass("d-none");
-  });
-
-  /***
-   * Add more variations
-   */
-  $("#product-attribute-add").on("click", function (e) {
-    var values = [];
-    $(".product-attributes").each(function () {
-      values.push($(this).val());
-    });
-    var payLoad = { attribute_ids: values };
-    $.ajax({
-      type: "POST",
-      url: "/admin/load-attributes",
-      data: payLoad,
-    }).done(function (response) {
-      $(".p-attr")
-        .last()
-        .after(response);
-      s.initFormExtendedDatetimepickers();
-    });
-  });
-
-  /**
-   * Add more rooms
-   */
-  $("#add-room").on("click", function (e) {
-    $.ajax({
-      type: "GET",
-      url: "/admin/properties/apartment",
-    }).done(function (response) {
-      $(".new-room")
-        .last()
-        .after(response);
-      s.initFormExtendedDatetimepickers();
-    });
-  });
-
-  $("#add-apartment").on("click", function (e) {
-    $.ajax({
-      type: "GET",
-      url: "/add/apartment",
-    }).done(function (response) {
-      $(".new-apartment")
-        .last()
-        .after(response);
-    });
-  });
-
-  $(document).on("click", ".radio-button", function () {
-    //console.log(true);
-    let self = $(this);
-    let p = self.parent().parent();
-    console.log(p);
-
-    p.find(".bed-qty").val("");
-  });
-
-  $('[data-toggle="collapse"]').on("click", function (e) {
-    console.log(true);
-  });
+  
 
   $(document).on("click", ".open-close-panel", function (e) {
     e.preventDefault();
