@@ -161,7 +161,7 @@ $(document).on("click", ".remove-image", function (e) {
   };
 
   $.ajax({
-    url: "/admin/delete/image?folder=apartments",
+    url: "/admin/delete/image?folder=events",
     type: "POST",
     data: payload,
     success: function (data) {
