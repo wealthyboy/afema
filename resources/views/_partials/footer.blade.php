@@ -26,10 +26,10 @@
                 </p>
 
                 <div class="container">
-                    <a href="{{$system_settings->facebook_link}}" target="_blank" class="text-white mx-3 fs-4">
+                    <a href="{{$system_settings->facebook_link}}" target="_blank" class="text-white mx-3 fs-3">
                         <i class="fab fa-facebook-f"></i>
                     </a>
-                    <a href="{{$system_settings->instagram_link}}" target="_blank" class="text-white mx-3 fs-4">
+                    <a href="{{$system_settings->instagram_link}}" target="_blank" class="text-white mx-3 fs-3">
                         <i class="fab fa-instagram"></i>
                     </a>
                 </div>
