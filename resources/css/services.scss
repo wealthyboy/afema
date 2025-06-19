@@ -1946,35 +1946,65 @@ a.modal-close {
   margin-top: .5rem;
 }
 
-.custom-indicators {
-  background: #fff;
-  border-radius: 30px;
-  padding: 4px 10px;
-  display: inline-flex;
-  gap: 8px;
-  position: absolute;
-  bottom: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+.custom-indicators{
+  position:absolute;
+  left:34%;
+  bottom:20px;
+  transform:translateX(-50%);
+  display:flex;
+  gap:8px;
+  padding:4px 12px;
+  background:#fff;
+  border-radius:30px;
+
+  /* ⬇︎ NEW, beefier shadow */
+  box-shadow:
+      0 4px 12px rgba(0,0,0,.18),   /* soft outer blur */
+      0 2px 4px  rgba(0,0,0,.10);   /* subtle inner depth */
+  
+  width:max-content;
 }
 
-.custom-indicators button {
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  background-color: #d1d1d1; /* light gray */
-  border: none;
-  transition: background-color 0.3s;
+/* remove Bootstrap’s default shape */
+.carousel-indicators [data-bs-target]{
+  all:unset;              /* wipe default styles */
 }
 
-.custom-indicators button.active {
-  background-color: #f4511e; /* orange color like in your image */
+/* ‑‑ dot ‑‑ */
+.custom-indicators button{
+  width:12px;
+  height:12px;
+  border-radius:50%;
+  background:#666;        /* dark‑grey when inactive */
+  cursor:pointer;
+  transition:background .3s;
+}
+
+/* ‑‑ active dot ‑‑ */
+.custom-indicators button.active{
+  background:#f4511e;     /* your orange */
 }
 
 
+.carousel-indicators li {
+  position: relative;
+  flex: 0 1 auto;
+  width: 30px;
+  height: 3px;
+  margin-right: 3px;
+  margin-left: 3px;
+  text-indent: -999px;
+  background-color: burlywood !important;
+}
 
 
-
-
-
+.carousel-indicators li.active {
+  position: relative;
+  flex: 0 1 auto;
+  width: 30px;
+  height: 3px;
+  margin-right: 3px;
+  margin-left: 3px;
+  text-indent: -999px;
+  background-color: #f4511e !important;
+}
