@@ -91,7 +91,7 @@
    <div class="container-fluid">
       <div id="intro-box2" class="opacity-0 mt-4 mb-4">
          <h2 class=" text-left heading-underline mb-3" itemprop="name">Core Values</h2>
-         <div class="text-secondary  text-left mt-2" itemprop="description">
+         <div class="  text-left mt-2" itemprop="description">
             These values are the foundation of our commitment to excellence, integrity, and impact.
          </div>
       </div>
@@ -183,16 +183,16 @@
 
 @if (null !== $upcoming_event)
 <section style="background-color: rgb(248, 245, 244);" class="py-5  mb-5">
-   <div id="lbox3" class="opacity-0 container">
-      <h2 class="mb-4 text-center heading-underline mb-4">Upcoming Events</h2>
+   <div id="lbox3" class="opacity-0  text-center  container">
+      <h2 class="mb-4 heading-underline text-center  mb-4">Upcoming Events</h2>
 
-      <p class="mb-1 text-center">Don’t miss out on the exciting moments we have planned!</p>
+      <p class="mb-1  bold-2">Don’t miss out on the exciting moments we have planned!</p>
 
       <div class="row">
          <!-- Example Event Card -->
          <div class="col-md-12 col-lg-12 mb-4">
             <div class="card h-100 shadow-sm border-0">
-               <div class="card-body">
+               <div class="card-body text-left">
                   <h5 class="card-title ">{{ $upcoming_event->title }}</h5>
                   <p class="card-text text-muted">
                      {!! $upcoming_event->description !!}
@@ -213,12 +213,12 @@
 
 
 <div class="container-fluid mb-">
-   <div class="d-flex justify-content-between align-items-center mb-3">
+   <div class="d-flex   justify-content-between align-items-center mb-3">
       <div>
-         <h2 class="heading-underline mb-4">
+         <h2 class="heading-underline    mb-4">
             Latest Events
          </h2>
-         <p>
+         <p class="bold-2">
             Stay connected with our most recent gatherings, celebrations, and community moments.
          </p>
 
