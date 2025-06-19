@@ -194,10 +194,10 @@
                <div class="card-body">
                   <h5 class="card-title">{{ $upcoming_event->title }}</h5>
                   <p class="card-text text-muted">
-                     {{ $upcoming_event->description }}
+                     {!! $upcoming_event->description !!}
                   </p>
                   <p class="card-text fw-bold text-primary">
-                     Date: {{ $upcoming_event->date_of_event}}
+                     Date: {{ $upcoming_event->date_of_event->format('d-m-y')}}
                   </p>
                </div>
             </div>
