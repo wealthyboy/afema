@@ -33,7 +33,7 @@
 </div>
 
 <div class="   p-3">
-   <div class="container-fluid text-center  pb-4 pt-1 primar rounded shadow" bis_skin_checked="1">
+   <div class="container-fluid text-center  pb-4 pt-1 primar rounded shadow text-danger bold-2" bis_skin_checked="1">
       <i>
          Promoting Unity, Culture, Social Engagement, and Development Among Afemai People in Canada
       </i>
@@ -222,7 +222,10 @@
          </p>
 
       </div>
-      <a href="/events" class="bold-2 border">View All Events</a>
+      <a href="/events" class="bold-2 text-danger inline-flex items-center">
+         View All Events
+
+      </a>
    </div>
    <div class="row g-0 p-0">
       @if(null !== $event)

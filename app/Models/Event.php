@@ -20,6 +20,9 @@ class Event extends Model
         'type'
     ];
 
+    protected $dates = ['date_of_event'];
+
+
     public function images()
     {
         return $this->morphMany(Image::class, 'imageable')->orderBy('id', 'asc');

@@ -9,6 +9,8 @@ use App\Models\Live;
 use App\Models\Information;
 use App\Models\Event;
 use App\Models\Banner;
+use Illuminate\Support\Carbon;
+
 
 
 
@@ -75,6 +77,11 @@ class HomeController
         }])->where('type', 'present')->first();
 
         $upcoming_event = Event::where('type', 'upcoming')->first();
+        $nextEvent = Event::where('type', 'upcoming')->whereDate('date_of_event', '>=', Carbon::today())
+            ->orderBy('date_of_event', 'asc')
+            ->first();
+
+
 
 
 
