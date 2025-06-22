@@ -43,9 +43,7 @@
    <script src="/js/popper.min.js"></script>
 
    <script>
-      Window.user = {
-
-      }
+      Window.user = {}
    </script>
 
    <style>
