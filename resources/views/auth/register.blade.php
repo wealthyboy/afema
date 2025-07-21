@@ -57,7 +57,7 @@
                         <input id="Address" type="text" class="form-control" name="address" required>
                      </div>
 
-                     <div class="form-group bmd-form-group col-md-12 col-12">
+                     <div class="form-group bmd-form-group col-md-12 col-12 is-focused">
                         <label class="bmd-label-floating">Date of birth</label>
                         <input type="text" id="checkin" class="form-control " name="date_of_birth" required>
 
