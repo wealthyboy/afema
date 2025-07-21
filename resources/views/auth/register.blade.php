@@ -30,7 +30,7 @@
                   @endif
 
                   <div class="form-row">
-                     <div class="form-group bmd-form-group col-6">
+                     <div class="form-group bmd-form-group  col-md-6 col-12">
                         <label class="bmd-label-floating">First name</label>
                         <input id="first_name" type="text" class="form-control" name="name" value="{{ old('name') }}" required>
                      </div>
