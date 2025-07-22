@@ -26,7 +26,7 @@
    <div class="watsapp pt-3 d-block d-md-none">
       <a class="chat-on-watsapp bg-dark bold-2" href="/register">
          Register
-         <i class="fas fa-arrow-right fa-2x float-right mr-2"></i>
+         <i style="margin-top: .35rem !important;" class="fas fa-arrow-right fa-1x float-right mr-2 "></i>
       </a>
    </div>
 
